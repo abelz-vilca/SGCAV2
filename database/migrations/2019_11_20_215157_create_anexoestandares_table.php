@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRegionesTable extends Migration
+class CreateAnexoestandaresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateRegionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('regiones', function (Blueprint $table) {
+        Schema::create('anexoestandares', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre_region', 45);
+            $table->string('archivoae')->nullable();
+            $table->unsignedBigInteger('anexoep_id');
+            $table->foreign('anexoep_id')->references('id')->on('estandar_programa');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateRegionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regiones');
+        Schema::dropIfExists('anexoestandares');
     }
 }

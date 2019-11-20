@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRegionesTable extends Migration
+class CreateCriteriosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateRegionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('regiones', function (Blueprint $table) {
+        Schema::create('criterios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre_region', 45);
+            $table->string('nombre_criterio')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateRegionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regiones');
+        Schema::dropIfExists('criterios');
     }
 }
