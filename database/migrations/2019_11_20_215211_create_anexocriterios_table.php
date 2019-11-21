@@ -16,8 +16,8 @@ class CreateAnexocriteriosTable extends Migration
         Schema::create('anexocriterios', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('archivoac')->nullable();
-            $table->unsignedBigInteger('anexoce_id');
-            $table->foreign('anexoce_id')->references('id')->on('criterio_estandar');
+            $table->unsignedBigInteger('criterioestandar_id');
+            $table->foreign('criterioestandar_id')->references('id')->on('criterio_estandar');
             $table->timestamps();
         });
     }

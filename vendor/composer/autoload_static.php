@@ -407,7 +407,10 @@ class ComposerStaticInit843474fccfcfe4802fbe9762038ccaa2
     public static $classMap = array (
         'AcademicosTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AcademicosTableSeeder.php',
         'App\\Academico' => __DIR__ . '/../..' . '/app/Academico.php',
+        'App\\Anexo' => __DIR__ . '/../..' . '/app/Anexo.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Criterio' => __DIR__ . '/../..' . '/app/Criterio.php',
+        'App\\CriterioEstandar' => __DIR__ . '/../..' . '/app/CriterioEstandar.php',
         'App\\Dimension' => __DIR__ . '/../..' . '/app/Dimension.php',
         'App\\Docente' => __DIR__ . '/../..' . '/app/Docente.php',
         'App\\Especialidad' => __DIR__ . '/../..' . '/app/Especialidad.php',
@@ -480,6 +483,7 @@ class ComposerStaticInit843474fccfcfe4802fbe9762038ccaa2
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'CriteriosTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CriteriosTableSeeder.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',

@@ -4,15 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Programa extends Model
+class Criterio extends Model
 {
-    protected $table = 'programas';
+    protected $table = 'criterios';
     protected $fillable = [
         'id',
-        'nombre_programa',
-        'CUI',/*código único de identificación*/
-        'academico_id',
-        'facultades_id'
+        'nombre_criterio',
 
 
     ];
@@ -21,19 +18,15 @@ class Programa extends Model
         return $this->belongsToMany(
             'App\Estandar',
             'criterio_estandar',
-            'programa_id',
+            'criterio_id',
             'estandar_id'
         )->withPivot(
             'estandar_id',
             'archivo',
             'calificacion',
             'descripcion',
+            'justificacion',
             'fecha'
         );
     }
-
-    // public function docentes()
-    // {
-    //     return $this->hasMany('App\Docente');
-    // }
 }

@@ -8,7 +8,10 @@ $baseDir = dirname($vendorDir);
 return array(
     'AcademicosTableSeeder' => $baseDir . '/database/seeds/AcademicosTableSeeder.php',
     'App\\Academico' => $baseDir . '/app/Academico.php',
+    'App\\Anexo' => $baseDir . '/app/Anexo.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Criterio' => $baseDir . '/app/Criterio.php',
+    'App\\CriterioEstandar' => $baseDir . '/app/CriterioEstandar.php',
     'App\\Dimension' => $baseDir . '/app/Dimension.php',
     'App\\Docente' => $baseDir . '/app/Docente.php',
     'App\\Especialidad' => $baseDir . '/app/Especialidad.php',
@@ -81,6 +84,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'CriteriosTableSeeder' => $baseDir . '/database/seeds/CriteriosTableSeeder.php',
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
     'Cron\\DayOfMonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',

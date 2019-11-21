@@ -15,8 +15,9 @@ class CreateAcademicosTable extends Migration
     {
         Schema::create('academicos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre_academico',100);
+            $table->string('nombre_academico', 100);
             $table->unsignedBigInteger('facultad_id');
+
             $table->foreign('facultad_id')->references('id')->on('facultades');
             $table->timestamps();
         });

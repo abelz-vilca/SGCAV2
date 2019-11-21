@@ -28,6 +28,23 @@ class Estandar extends Model
         );
     }
 
+    //otra relacion
+    public function criterio()
+    {
+        return $this->belongsToMany(
+            'App\Criterio',
+            'criterio_estandar',
+            'estandar_id',
+            'criterio_id'
+        )->withPivot(
+            'criterio_id',
+            'archivo',
+            'calificacion',
+            'descripcion',
+            'justificacion',
+            'fecha'
+        );
+    }
     public static function promedio_ponderado($id, $vaina)
     {
         return DB::query("CALL palm_01(" . $id . "," . $vaina . ")");
