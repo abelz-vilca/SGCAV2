@@ -4,6 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use DB;
+use carbon\Carbon;
+use App\Programa;
+use App\Criterio;
+use App\EstandarPragrama;
+use App\CriterioEstandar;
+use App;
 
 class CriterioController extends Controller
 {
@@ -13,9 +20,7 @@ class CriterioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
+    { }
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +29,8 @@ class CriterioController extends Controller
      */
     public function create()
     {
-        //
+        $criterios = App\Criterio::all();
+        return view('CRITERIOS.criterios', compact('criterios'));
     }
 
     /**

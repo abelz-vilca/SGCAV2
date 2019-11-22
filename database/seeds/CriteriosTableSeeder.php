@@ -15,7 +15,6 @@ class CriteriosTableSeeder extends Seeder
             //E1
             'El programa de estudios ha definido claramente el número y las características los miembros de sus grupos de interés, quienes han participado y participan en procesos de consulta para la definición de los propósitos del programa de estudios.',
             'Se demuestra que los propósitos del programa de estudios están alineados con los propósitos institucionales',
-            'Se demuestra que los propósitos del programa de estudios están alineados con los propósitos institucionales.',
             'Estos propósitos están establecidos en documentos oficiales y están a disposición de toda la sociedad a través de la página web de la institución, los prospectos respectivos de los programas de estudios, entre otros documentos que la institución pudiera tener.',
 
             //E2

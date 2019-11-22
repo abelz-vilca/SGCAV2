@@ -15,7 +15,7 @@ class CreateCriteriosTable extends Migration
     {
         Schema::create('criterios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre_criterio', 601)->nullable();
+            $table->string('nombre_criterio', 600)->nullable();
             $table->timestamps();
         });
     }

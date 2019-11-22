@@ -20,7 +20,8 @@ Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
 Route::get('/reportetotal', 'PagesController@reporte')->name('reporte');
 route::get('/errors', 'ProgramaController@error')->name('errors');
 
-
+//para devolver criterio
+Route::get('/criterios', 'CriterioController@create')->name('criterios');
 
 Route::get('', function () {
     return view('');
