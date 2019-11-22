@@ -26,7 +26,7 @@
                             <th scope="row">{{$item->id}}</th>
                             <td>{{$item->nombre_criterio}}</td>
                             <td>
-                                <a href="" type="button" class="btn btn-info"><i class=" fa fa-file"> </i>IR</a>
+                                <a href="" type="button" class="btn btn-info"><i class=" fa fa-file"></i> IR</a>
                             </td>
                         </tr>
                         @endforeach()

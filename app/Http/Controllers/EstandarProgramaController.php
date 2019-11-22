@@ -94,11 +94,11 @@ class EstandarProgramaController extends Controller
             // 'descripcion' => 'required'
         ]);
 
-        // codigo para conseguirr ruta y nomnre dle archivo subido
-        // $data = $request->input('image');
-        // $photo = $request->file('image')->getClientOriginalName();
-        // $destination = base_path() . '/public/uploads';
-        // $request->file('image')->move($destination, $photo);
+        //codigo para conseguirr ruta y nomnre dle archivo subido
+        // $data = $request->input('archivo');
+        // $photo = $request->file('archivo')->getClientOriginalName();
+        // $destination = base_path() . 'storage/public/Estandares';
+        // $request->file('archivo')->move($destination, $photo);
 
 
         $notaupdate = App\EstandarPrograma::findOrFail($id);

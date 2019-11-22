@@ -33,6 +33,12 @@ class CriterioController extends Controller
         return view('CRITERIOS.criterios', compact('criterios'));
     }
 
+    public function criterio()
+    {
+
+        return view('CRITERIOS.calificar');
+    }
+
     /**
      * Store a newly created resource in storage.
      *

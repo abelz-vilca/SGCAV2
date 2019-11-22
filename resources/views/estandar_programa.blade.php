@@ -28,6 +28,7 @@
                 <th scope="col">Descripcion</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Estandar</th>
+                <th scope="col">programa</th>
                 {{-- <th scope="col">estandar_NAME</th> --}}
                 {{-- <th scope="col">P_id</th> --}}
                 <th align="center" scope="col">Acciones</th>
@@ -44,6 +45,7 @@
                 <td align="center">{{$iteme->descripcion}}</td>
                 <td align="center">{{$iteme->fecha}}</td>
                 <td align="center">{{$iteme->estandar_id}}</td>
+                <td align="center">{{$iteme->programa_id}}</td>
                 {{-- <td>{{$iteme->nombre_estandar}}</td> --}}
 
                 {{-- <td>{{$iteme->programa_id}}</td> --}}
@@ -53,12 +55,14 @@
                 <td class="" align="center">
                     <a href="{{route('programas.editar', $iteme)}}" type="button" class="btn btn-dark"> <img
                             src="{{asset('imagenes/calificar.png')}}" width="30" height="30"
-                            class="d-inline-block align-top" alt="">Calificar</a>
-                    {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
-                    {{-- <a href="{{Storage::url($iteme->archivo)}}" target="_blank" type="button" class="btn btn-info">
-                    <img src="{{asset('imagenes/internet.png')}}" width="30" height="30">
+                            class="d-inline-block align-top" alt="">Estándar</a>
 
-                    Verificar </a> --}}
+                    <a href="" type="button" class="btn btn-info">Criterios</a>
+                </td>
+                {{-- <a href="{{Storage::url($iteme->archivo)}}" target="_blank" type="button" class="btn btn-info">
+                <img src="{{asset('imagenes/internet.png')}}" width="30" height="30">
+
+                Verificar </a> --}}
 
                 </td>
             </tr>

@@ -14,6 +14,9 @@
 //PRUEBA PARA INPUT
 Route::get('/subir', 'PruebaController@subirArchivo')->name('subir');
 Route::post('/subirs', ['as' => 'subir.archivo', 'uses' => 'PruebaController@create']);
+//prueba grafico
+Route::get('/grafic', 'PruebaController@grafic')->name('grafic');
+Route::get('/grafic2', 'PruebaController@grafic2')->name('grafic2');
 
 //otras Rutas
 Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
@@ -23,6 +26,11 @@ route::get('/errors', 'ProgramaController@error')->name('errors');
 //para devolver criterio
 Route::get('/criterios', 'CriterioController@create')->name('criterios');
 
+Route::get('/criterios/{id}', ['as' => 'criterios.calificar', 'uses' => 'CriterioController@editar']);
+
+//RUTA DE EDITAR CRITERIO ESTANDAR
+Route::get('/criterioestandar', 'CriterioController@criterio')->name('crietrioestandar');
+Route::get('/criterios/{id}', ['as' => 'programadetalle', 'uses' => 'CriterioEstandarController@editar']);
 Route::get('', function () {
     return view('');
 });
@@ -40,7 +48,7 @@ Route::get('', function () {
 Route::get('/programas', 'ProgramaController@create')->name('programa');
 Route::get('/actualizardatos', 'PagesController@datos')->name('actualizardatos');
 
-Route::get('/programas/{id}', ['as' => 'programadetalle', 'uses' => 'ProgramaController@editar']);
+
 
 
 //mostrar lista de progrmas
