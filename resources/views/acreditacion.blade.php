@@ -52,9 +52,9 @@
                 </form>
 
             </div>
-            <a class="btn btn-success" href="programas">CALIFICAR PROGRAMAS</a>
+            <a class="btn btn-info" href="programas">CALIFICAR PROGRAMAS</a>
             <p></p>
-            <a class="btn btn-warning" href="actualizardatos">Actualizar Datos</a>
+            <a class="btn btn-danger" href="actualizardatos">Actualizar Datos</a>
         </div>
 
     </div>

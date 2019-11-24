@@ -24,6 +24,9 @@
 </head>
 
 <body class="fix-header card-no-border">
+    {{-- BLOQUEAR COPIAR CODIGO XD --}}
+    {{-- <body class="fix-header card-no-border" oncontextmenu="return false" onkeydown="return false"> --}}
+
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->

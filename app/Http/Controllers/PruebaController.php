@@ -46,10 +46,10 @@ class PruebaController extends Controller
     {
         $notaNueva = new App\Prueba;
         //obtenemos el campo file definido en el formulario
-        $file = $request->file('archivo');
+        // $file = $request->file('archivo');
 
         //obtenemos el nombre del archivo
-        $nombre = Carbon::now()->second . $file->getClientOriginalName();
+        // $nombre = Carbon::now()->second . $file->getClientOriginalName();
 
         //indicamos que queremos guardar un nuevo archivo en el disco local
         // \Storage::disk('local')->put($nombre,  \File::get($file));

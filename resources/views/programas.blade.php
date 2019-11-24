@@ -2,6 +2,7 @@
 
 @section('name')
 
+
 <link rel="stylesheet" href="{{asset('tablas/css/dataTables.bootstrap4.min.css')}}">
 
 
@@ -28,8 +29,11 @@
                             <td>{{$item->CUI}}</td>
 
                             <td>
-                                <a href="{{route('estandar_programaid', $item)}}" type="button" class="btn btn-info"><i
-                                        class=" fa fa-file"> </i> CALIFICAR</a>
+                                <a href="{{route('estandar_programaid', $item)}}" type="button" class="btn btn-info">
+                                    <ion-icon name="clipboard"></ion-icon>
+                                    CALIFICAR
+                                </a>
+
                             </td>
                         </tr>
                         @endforeach()
