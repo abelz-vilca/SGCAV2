@@ -36,6 +36,12 @@ class PruebaController extends Controller
 
         return view('PRUEBAS.graficos');
     }
+    public function editarestandar()
+    {
+
+
+        return view('CRITERIOS.calificarcriterio');
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CriterioEstandar extends Model
 {
-    protected $table = "estandar_programa";
+    protected $table = "criterio_estandar";
     protected $fillable = [
         'id',
         'archivo',

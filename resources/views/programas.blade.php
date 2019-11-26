@@ -31,7 +31,11 @@
                             <td>
                                 <a href="{{route('estandar_programaid', $item)}}" type="button" class="btn btn-info">
                                     <ion-icon name="clipboard"></ion-icon>
-                                    CALIFICAR
+                                    ESTANDAR
+                                </a>
+                                <a href="{{route('criterio_programaid', $item)}}" type="button" class="btn btn-info">
+                                    <ion-icon name="clipboard"></ion-icon>
+                                    CRITERIOS
                                 </a>
 
                             </td>

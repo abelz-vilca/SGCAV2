@@ -34,8 +34,8 @@ class EstandarProgramaController extends Controller
     {
         // $devolverisprograma = App\EstandarPrograma::findOrFail($programa_id);
         $devolverisprograma = App\EstandarPrograma::where('programa_id', $programa_id)->get();
-        $estandarprograma = App\EstandarPrograma::where('programa_id', 1)->get();
-        return view('estandar_programa', compact('devolverisprograma', 'estandarprograma'));
+        // $estandarprograma = App\EstandarPrograma::where('programa_id', 1)->get();
+        return view('estandar_programa', compact('devolverisprograma'));
     }
     /**
      * Store a newly created resource in storage.

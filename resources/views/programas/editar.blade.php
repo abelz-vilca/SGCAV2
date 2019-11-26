@@ -28,7 +28,7 @@
                 <div class="alert alert-success">{{ session('mensaje') }}
                 </div>
                 @endif
-                <form method="POST" action="{{ route('estandar_programa.update', $devolverisprograma->id ) }}"
+                <form method="POST" action="{{ route('estandar_programa.update', $devolverisprograma->id )}}"
                     enctype="multipart/form-data">
                     @method('PUT')
                     @csrf

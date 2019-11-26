@@ -22,7 +22,20 @@ class CriterioEstandarController extends Controller
     {
         //
     }
+    public function showcriterio($programa_id)
+    {
+        // $devolverisprograma = App\EstandarPrograma::findOrFail($programa_id);
+        $showlistacriterio = App\CriterioEstandar::where('programa_id', $programa_id)->get();
 
+        return view('CRITERIOS.criterio_estandar_editar', compact('showlistacriterio'));
+    }
+    public function showcriterioid($criterio_id)
+    {
+        // $devolverisprograma = App\EstandarPrograma::findOrFail($programa_id);
+        $showlistacriterioid = App\CriterioEstandar::where('programa_id', $criterio_id)->get();
+
+        return view('CRITERIOS.criterio_estandar_editar2', compact('showlistacriterioid'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -30,8 +43,10 @@ class CriterioEstandarController extends Controller
      */
     public function create()
     {
-        //
+        $criterio_estandar = App\CriterioEstandar::all();
+        return view('CRITERIOS.criterio_estandar_programa', compact('criterio_estandar'));
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -71,6 +86,13 @@ class CriterioEstandarController extends Controller
 
         return view('programas.editar', compact('devolverisprograma'));
     }
+    public function editarcriterio($id)
+    {
+        $editarcriterio = App\CriterioEstandar::findOrFail($id);
+        $criterionombre1 = App\Criterio::all();
+        $criterionombre = App\Criterio::where('id', $id)->get();
+        return view('CRITERIOS.calificarcriterio', compact('editarcriterio', 'criterionombre1', 'criterionombre'));
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -80,7 +102,21 @@ class CriterioEstandarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+
+        $request->validate([
+            'calificacion' => 'required',
+            'justificacion' => 'required'
+        ]);
+
+        $criterioupdate = App\CriterioEstandar::findOrFail($id);
+        $criterioupdate->calificacion = $request->calificacion;
+        $criterioupdate->justificacion = $request->justificacion;
+        // $criterioupdate->descripcion = $request->descripcion;
+        $criterioupdate->fecha = Carbon::now();
+
+        $criterioupdate->save();
+        return back()->with('mensaje', 'Calificacion actualizada');
     }
 
     /**

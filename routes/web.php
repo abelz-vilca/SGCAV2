@@ -17,6 +17,9 @@ Route::post('/subirs', ['as' => 'subir.archivo', 'uses' => 'PruebaController@cre
 //prueba grafico
 Route::get('/grafic', 'PruebaController@grafic')->name('grafic');
 Route::get('/grafic2', 'PruebaController@grafic2')->name('grafic2');
+//prueba para formulario
+Route::get('/editarestandar', 'PruebaController@editarestandar')->name('editarestandar');
+
 
 //otras Rutas
 Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
@@ -25,12 +28,25 @@ route::get('/errors', 'ProgramaController@error')->name('errors');
 
 //para devolver criterio
 Route::get('/criterios', 'CriterioController@create')->name('criterios');
+Route::get('/criterio_estandar', 'CriterioEstandarController@create')->name('criterio_estandar');
+
+//Route::get('estandar_programa/{programa_id}', ['as' => 'estandar_programaid', 'uses' => 'EstandarProgramaController@devolverprograma']);
+Route::get('criterio_estandar_show/{programa_id}', ['as' => 'criterio_programaid', 'uses' => 'CriterioEstandarController@showcriterio']);
+Route::get('criterio_estandar_showid/{programa_id}', ['as' => 'criterio_editprogramaid', 'uses' => 'CriterioEstandarController@showcriterioid']);
+
 
 Route::get('/criterios/{id}', ['as' => 'criterios.calificar', 'uses' => 'CriterioController@editar']);
 
 //RUTA DE EDITAR CRITERIO ESTANDAR
 Route::get('/criterioestandar', 'CriterioController@criterio')->name('crietrioestandar');
+// Route::get('/editar/{id}', ['as' => 'programas.editar', 'uses' => 'EstandarProgramaController@editar']);
+Route::get('/criterioestitar/{id}', ['as' => 'criterios.editar', 'uses' => 'CriterioEstandarController@editarcriterio']);
+// Route::put('/editar/{id}', ['as' => 'estandar_programa.update', 'uses' => 'EstandarProgramaController@updates']);
+Route::put('/criterioestitar/{id}', ['as' => 'criterio_estadandar.update', 'uses' => 'CriterioEstandarController@update']);
+
 Route::get('/criterios/{id}', ['as' => 'programadetalle', 'uses' => 'CriterioEstandarController@editar']);
+
+
 Route::get('', function () {
     return view('');
 });
