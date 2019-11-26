@@ -12,33 +12,13 @@ class ProgramasTableSeeder extends Seeder
     public function run()
     {
         DB::table('programas')->insert([
-            [
-                'nombre_programa' => 'INGENIERÍA AGRONOMÍA',
-                'CUI' => '170800468',
+            ['nombre_programa' => 'INGENIERÍA AGRONOMÍA', 'CUI' => '170800468', 'facultad_id' => '1'],
 
-                'facultad_id' => '1'
-            ],
+            ['nombre_programa' => 'INGENIERÍA AGRÍCOLA', 'CUI' => '170800492', 'facultad_id' => '1'],
 
-            [
-                'nombre_programa' => 'INGENIERÍA AGRÍCOLA',
-                'CUI' => '170800492',
+            ['nombre_programa' => 'INGENIERÍA AGROFORESTAL', 'CUI' => '170800490', 'facultad_id' => '1'],
 
-                'facultad_id' => '1'
-            ],
-
-            [
-                'nombre_programa' => 'INGENIERÍA AGROFORESTAL',
-                'CUI' => '170800490',
-
-                'facultad_id' => '1'
-            ],
-
-            [
-                'nombre_programa' => 'MEDICINA VETERINARIA',
-                'CUI' => '170800491',
-
-                'facultad_id' => '1'
-            ], //1
+            ['nombre_programa' => 'MEDICINA VETERINARIA', 'CUI' => '170800491', 'facultad_id' => '1'], //1
 
             [
                 'nombre_programa' => 'ESCUELA PROFESIONAL DE BIOLOGÍA',

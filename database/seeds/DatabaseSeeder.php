@@ -37,7 +37,8 @@ class DatabaseSeeder extends Seeder
             // UsersTableSeeder::class,
             Estandar_programaTableSeeder::class,
             CriteriosTableSeeder::class,
-            Criterio_estandarTableSeeder::class,
+            // Criterio_estandarTableSeeder::class,
+            // Criterios_estandaresTableSeeder::class,
             UsuariosTableSeeder::class,
             // Estandares_ProgramasTableSeeder::class
             //DocentesTableSeeder::class,

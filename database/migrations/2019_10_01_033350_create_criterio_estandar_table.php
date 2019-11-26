@@ -20,12 +20,13 @@ class CreateCriterioEstandarTable extends Migration
             $table->text('descripcion')->nullable();
             $table->text('justificacion')->nullable();
             $table->date('fecha')->nullable();
-            $table->unsignedBigInteger('estandar_id');
             $table->unsignedBigInteger('criterio_id');
+            $table->unsignedBigInteger('estandar_id');
             $table->unsignedBigInteger('programa_id');
+            $table->foreign('criterio_id')->references('id')->on('criterios');
             $table->foreign('estandar_id')->references('id')->on('estandares');
             $table->foreign('programa_id')->references('id')->on('programas');
-            $table->foreign('criterio_id')->references('id')->on('criterios');
+
             $table->timestamps();
         });
     }
