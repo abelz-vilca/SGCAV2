@@ -28,23 +28,6 @@ route::get('/errors', 'ProgramaController@error')->name('errors');
 
 //para devolver criterio
 Route::get('/criterios', 'CriterioController@create')->name('criterios');
-Route::get('/criterio_estandar', 'CriterioEstandarController@create')->name('criterio_estandar');
-
-//Route::get('estandar_programa/{programa_id}', ['as' => 'estandar_programaid', 'uses' => 'EstandarProgramaController@devolverprograma']);
-Route::get('criterio_estandar_show/{programa_id}', ['as' => 'criterio_programaid', 'uses' => 'CriterioEstandarController@showcriterio']);
-Route::get('criterio_estandar_showid/{programa_id}', ['as' => 'criterio_editprogramaid', 'uses' => 'CriterioEstandarController@showcriterioid']);
-
-
-Route::get('/criterios/{id}', ['as' => 'criterios.calificar', 'uses' => 'CriterioController@editar']);
-
-//RUTA DE EDITAR CRITERIO ESTANDAR
-Route::get('/criterioestandar', 'CriterioController@criterio')->name('crietrioestandar');
-// Route::get('/editar/{id}', ['as' => 'programas.editar', 'uses' => 'EstandarProgramaController@editar']);
-Route::get('/criterioestitar/{id}', ['as' => 'criterios.editar', 'uses' => 'CriterioEstandarController@editarcriterio']);
-// Route::put('/editar/{id}', ['as' => 'estandar_programa.update', 'uses' => 'EstandarProgramaController@updates']);
-Route::put('/criterioestitar/{id}', ['as' => 'criterio_estadandar.update', 'uses' => 'CriterioEstandarController@update']);
-
-Route::get('/criterios/{id}', ['as' => 'programadetalle', 'uses' => 'CriterioEstandarController@editar']);
 
 
 Route::get('', function () {
@@ -70,20 +53,23 @@ Route::get('/actualizardatos', 'PagesController@datos')->name('actualizardatos')
 //mostrar lista de progrmas
 Route::get('/listarprogramas', 'ProgramaController@creates');
 
-//PARA EDITAR PROGRAMA DE ESTUDIOS
+//PARA EDITAR estandar_programa
 Route::get('estandar_programa', ['as' => 'estandar_programa.create', 'uses' => 'EstandarProgramaController@create']);
 Route::get('/editar/{id}', ['as' => 'programas.editar', 'uses' => 'EstandarProgramaController@editar']);
-
 Route::put('/editar/{id}', ['as' => 'estandar_programa.update', 'uses' => 'EstandarProgramaController@updates']);
 Route::get('estandar_programa/{programa_id}', ['as' => 'estandar_programaid', 'uses' => 'EstandarProgramaController@devolverprograma']);
+
+//PARA EDITAR criterio_estandar
+Route::get('criterio_estandar', ['as' => 'criterio_estandar.create', 'uses' => 'CriterioEstandarController@create']);
+Route::get('/editarcriterio/{id}', ['as' => 'criterio.editar', 'uses' => 'CriterioEstandarController@editar']);
+Route::put('/editarcriterio/{id}', ['as' => 'criterio_estandar.update', 'uses' => 'CriterioEstandarController@updates']);
+Route::get('criterio_estandar/{programa_id}', ['as' => 'criterio_programaid', 'uses' => 'CriterioEstandarController@devolverprograma']);
 
 //link para mandar a su calificacion
 Route::get('/programass/{id}', ['as' => 'listardetalles', 'uses' => 'ProgramaController@editare']);
 
 //////****************************************************** */ruta pa suma
-
 Route::get('/suma',  'PagesController@sumas');
-
 Route::get('/sumas/{id}', ['as' => 'sumacalificacion', 'uses' => 'PagesController@sumas']);
 Route::get('/factor/{id}', ['as' => 'graficofactor', 'uses' => 'PagesController@factor']);
 Route::get('/dimension/{id}', ['as' => 'graficodimension', 'uses' => 'PagesController@dimension']);
@@ -96,8 +82,6 @@ Route::get('/totalestandares', ['as' => 'totalestandar', 'uses' => 'PagesControl
 // *******************************************************************************************************
 
 Route::get('reporte', 'PagesController@reportes')->name('reportes');
-
-
 
 Auth::routes();
 

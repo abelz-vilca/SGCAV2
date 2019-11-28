@@ -33,9 +33,9 @@ class EstandarProgramaController extends Controller
     public function devolverprograma($programa_id)
     {
         // $devolverisprograma = App\EstandarPrograma::findOrFail($programa_id);
-        $devolverisprograma = App\EstandarPrograma::where('programa_id', $programa_id)->get();
+        $devolverprograma = App\EstandarPrograma::where('programa_id', $programa_id)->get();
         // $estandarprograma = App\EstandarPrograma::where('programa_id', 1)->get();
-        return view('estandar_programa', compact('devolverisprograma'));
+        return view('estandar_programa', compact('devolverprograma'));
     }
     /**
      * Store a newly created resource in storage.
@@ -87,31 +87,25 @@ class EstandarProgramaController extends Controller
     public function updates(Request $request, $id)
 
     {
-
         $request->validate([
             'archivo' => 'required',
             'calificacion' => 'required'
             // 'descripcion' => 'required'
         ]);
-
         //codigo para conseguirr ruta y nomnre dle archivo subido
         // $data = $request->input('archivo');
         // $photo = $request->file('archivo')->getClientOriginalName();
         // $destination = base_path() . 'storage/public/Estandares';
         // $request->file('archivo')->move($destination, $photo);
 
-
         $notaupdate = App\EstandarPrograma::findOrFail($id);
-
         if ($request->hasFile('archivo')) {
             $notaupdate->archivo = $request->file('archivo')->store('public/Estandares');
         }
-
         // $notaupdate->archivo = $request->file('archivo')->store('public');
         $notaupdate->calificacion = $request->calificacion;
         $notaupdate->descripcion = $request->descripcion;
         $notaupdate->fecha = Carbon::now();
-
         $notaupdate->save();
         return back()->with('mensaje', 'Calificacion actualizada');
     }

@@ -34,6 +34,4 @@ class CriterioEstandar extends Model
 
         );
     }
-    public function sumas()
-    { }
 }

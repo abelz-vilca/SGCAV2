@@ -14,7 +14,7 @@
         <thead class="table table-striped">
             <tr align="center" class="bg-info">
                 <th scope="col">#ID</th>
-                {{-- <th scope="col">Archivo</th> --}}
+                <th scope="col">Archivo</th>
                 <th scope="col">Cumplimiento</th>
                 {{-- <th scope="col">Descripcion</th> --}}
                 <th scope="col">Justificacion</th>
@@ -29,10 +29,11 @@
         <tbody>
 
             {{-- @foreach ($estandarprograma as $item ) --}}
-            @foreach ($showlistacriterio as $item )
+            @foreach ($devolverprograma as $item )
             <tr disabled="disabled" class="table-light">
                 <th scope="row">{{$item->id}}</th>
-                {{-- <td align="center">{{$item->archivo}}</td> --}}
+                <td align="center"><a href="{{Storage::url($item->archivo)}}" target="_blank">verificar archivo</a>
+                </td>
                 <td align="center">{{$item->calificacion}}</td>
                 {{-- <td align="center">{{$item->descripcion}}</td> --}}
                 <td align="center">{{$item->justificacion}}</td>
@@ -42,7 +43,7 @@
                 <td align="center">{{$item->programa_id}}</td>
                 <td class="" align="center">
 
-                    <a href="{{route('criterios.editar', $item)}}" type="button" class="btn btn-info">CALIFICAR</a>
+                    <a href="{{route('criterio.editar', $item)}}" type="button" class="btn btn-info">CALIFICAR</a>
                     <a href="" type="button" class="btn btn-info">AXEXOS</a>
                 </td>
 

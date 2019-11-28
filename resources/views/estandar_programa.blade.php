@@ -37,7 +37,7 @@
         <tbody>
 
             {{-- @foreach ($estandarprograma as $item ) --}}
-            @foreach ($devolverisprograma as $iteme )
+            @foreach ($devolverprograma as $iteme )
             <tr disabled="disabled" class="table-light">
                 <th scope="row">{{$iteme->id}}</th>
                 <td><a href="{{Storage::url($iteme->archivo)}}" target="_blank">verificar archivo</a></td>
@@ -54,7 +54,7 @@
 
                 <td class="" align="center">
                     <a href="{{route('programas.editar', $iteme)}}" type="button" class="btn btn-dark"> <img
-                            src="{{asset('imagenes/calificar.png')}}" width="30" height="30"
+                            src="{{asset('imagenes/calificar.png')}}" width="20" height="20"
                             class="d-inline-block align-top" alt="">Estándar</a>
 
                     <a href="" type="button" class="btn btn-info">Criterios</a>

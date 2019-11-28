@@ -46,7 +46,7 @@
                         <div class="col-sm-6">
                             <div class="form-row">
                                 <div class="form-group col-md-12">
-                                    <label for="basic-url">SELECIONE EL DOCUMENTO</label>
+                                    <label for="basic-url">SELECIONE DOCUMENTO</label>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <input type="file" class="form-control-file" name="archivo" id="archivo">
