@@ -68,6 +68,17 @@
                                     placeholder="justificación del Cumplimiento"
                                     value="{{ old('justificacion') }}"></textarea>
                             </div>
+                            {{-- <div class="form-group col-md-12">
+                                <label for="estandar_id">Estandar</label>
+                                <input disabled="disabled" type="text" class="form-control"
+                                    value=" ESTÁNDAR Nro : <php echo($devolverisprograma->estandar_id); ?>">
+
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="estandar_id">Estandar</label>
+                                <input disabled="disabled" type="text" class="form-control"
+                                    value="programa ID : <php echo($devolverisprograma->programa_id); ?>">
+                            </div> --}}
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">

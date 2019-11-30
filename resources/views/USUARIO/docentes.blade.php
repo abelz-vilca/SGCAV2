@@ -2,11 +2,9 @@
 
 @section('name')
 
-
 <div align="center" class="container-fluid container-my-4">
-    <h4>CALIFICACION DE LOS CRITERIOS</h4>
-    {{-- <div class="card-header">{{$criterioestandar->fecha->format('d M Y')}}
-</div> --}}
+    <h3 class="card-title" class="fixed-top">Docentes Usuarios</h3>
+    <hr>
 </div>
 <div class="container-fluid" class="container-my-4">
 
@@ -14,51 +12,49 @@
         <thead class="table table-striped">
             <tr align="center" class="bg-info">
                 <th scope="col">#ID</th>
-                <th scope="col">Archivo</th>
-                <th scope="col">Cumplimiento</th>
-                {{-- <th scope="col">Descripcion</th> --}}
-                <th scope="col">Justificacion</th>
-                <th scope="col">Fecha</th>
-                {{-- <th scope="col">C</th>
-                <th scope="col">E</th>
-                <th scope="col">P</th> --}}
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellido Paterno</th>
+                <th scope="col">Apellido Materno</th>
+                <th scope="col">Email(User)</th>
+                <th scope="col">Celular</th>
+                <th scope="col">password(CUI)</th>
+                <th scope="col">programa_id</th>
+                {{-- <th scope="col">estandar_NAME</th> --}}
                 {{-- <th scope="col">P_id</th> --}}
-                <th align="center" scope="col">Accion</th>
-                <th align="center" scope="col">Proceso</th>
+                <th align="center" scope="col">Acciones</th>
             </tr>
         </thead>
+
         <tbody>
 
             {{-- @foreach ($estandarprograma as $item ) --}}
-            @foreach ($devolverprograma as $item )
+            @foreach ($usuarios as $iteme )
             <tr disabled="disabled" class="table-light">
-                <th scope="row">{{$item->id}}</th>
-                <td align="center"><a href="{{Storage::url($item->archivo)}}" target="_blank">verificar Doc. criteerio
-                        {{$item->id}}</a>
-                </td>
-                <td align="center">{{$item->calificacion}}</td>
-                {{-- <td align="center">{{$item->descripcion}}</td> --}}
-                <td align="center">{{$item->justificacion}}</td>
-                <td align="center">{{$item->fecha}}</td>
-                {{-- <td align="center">{{$item->criterio_id}}</td>
-                <td align="center">{{$item->estandar_id}}</td>
-                <td align="center">{{$item->programa_id}}</td> --}}
-                <td class="" align="center">
+                <th scope="row">{{$iteme->id}}</th>
+                <td>{{$iteme->nombres}}</td>
+                <td align="center">{{$iteme->apellido_paterno}}</td>
+                <td align="center">{{$iteme->apellido_materno}}</td>
+                <td align="center">{{$iteme->email}}</td>
+                <td align="center">{{$iteme->cel}}</td>
+                <td align="center"><a href="https://www.google.com" target="_blank">password</a></td>
+                <td>{{$iteme->programa_id}}</td>
 
-                    <a href="{{route('criterio.editar', $item)}}" type="button" class="btn btn-info">Calificar</a>
-                    <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
-                        class="btn btn-info">Verificar Documento</a>
+
+
+                <td class="" align="center">
+                    <a href="" type="buttones" class="btn btn-warning" padding>. Editar ..</a>
+                    <a href="" type="buttones" class="btn btn-danger" font-size: 12px;>Eliminar</a>
                 </td>
-                <td>
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                </td>
+
 
             </tr>
 
             @endforeach()
+
         </tbody>
+
     </table>
+    {{-- @include('modal') --}}
 </div>
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
 
@@ -107,5 +103,4 @@
 }
 </script>
 
-
-@endsection()
+@endsection

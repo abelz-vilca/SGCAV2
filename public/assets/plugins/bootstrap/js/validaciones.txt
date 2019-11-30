@@ -1,0 +1,591 @@
+var v = true;
+$("span.help-block").show();
+
+function verificar() {
+
+    var v1 = 0, v2 = 0, v3 = 0, v4 = 0, v5 = 0, v6 = 0, v7 = 0, v8 = 0, v9 = 0, v10 = 0, v11 = 0, v12 = 0, v13 = 0, v14 = 0, v15 = 0, v16 = 0, v17 = 0, v18 = 0, v19 = 0;
+    v1 = validacion('codigo');
+    v2 = validacion('nombres');
+    v3 = validacion('dni');
+    v4 = validacion('email');
+    v5 = validacion('genderRadios');
+    v6 = validacion('carrera');
+    v7 = validacion('fechanac');
+    v8 = validacion('fechaNac1');
+    v9 = validacion('fechaNac2');
+    v10 = validacion('fechaNac3');
+
+    v11 = validacion('nombre');
+    v12 = validacion('apaterno');
+    v13 = validacion('amaterno');
+
+    v14 = validacion('celular');
+    v15 = validacion('celular2');
+
+    v16 = validacion('telefono');
+    v17 = validacion('telefono2');
+
+    v18 = validacion('contrasena');
+    v19 = validacion('contrasena2');
+
+
+
+    if (v1 === false || v2 === false || v3 === false || v4 === false || v5 === false || v6 === false || v7 === false || v8 === false || v9 === false || v10 === false || v11 === false || v12 === false || v13 === false || v14 === false || v15 === false || v16 === false || v17 === false || v18 === false || v19 === false) {
+        $("#exito").hide();
+        $("#error").show();
+        return false;
+    } else {
+        $("#error").hide();
+        $("#exito").show();
+        return true;
+    }
+}
+
+var contador = 0;
+function validacion(campo) {
+    var a = 0;
+    //-------------------------------validacion codigo-------------------------------------//
+    //-------------------------------validacion codigo-------------------------------------//
+    //-------------------------------validacion codigo-------------------------------------//
+    if (campo === 'codigo') {
+        var codigo = document.getElementById(campo).value;
+        if (codigo == null || codigo.length == 0 || /^\s+$/.test(codigo)) {
+            $("#glypcn" + campo).remove();//se elimina el span
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun codigo.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            if (isNaN(codigo)) {
+
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                $('#' + campo).parent().children('span').text("Solo se acepta números.").show();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                return false;
+            }
+            else {
+
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+                $('#' + campo).parent().children('span').hide();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+                return true;
+            }
+
+
+        }
+
+    }
+
+    //-------------------------------validacion nombres-------------------------------------//
+    //-------------------------------validacion nombres-------------------------------------//
+    //-------------------------------validacion nombres-------------------------------------//
+    if (campo === 'nombres') {
+        var nombres = document.getElementById(campo).value;
+        if (nombres == null || nombres.length == 0 || /^\s+$/.test(nombres)) {
+
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun nombre.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+            $('#' + campo).parent().children('span').hide();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+            return true;
+
+        }
+    }
+
+
+    //-------------------------------validacion DNI-------------------------------------//
+    //-------------------------------validacion DNI-------------------------------------//
+    //-------------------------------validacion DNI-------------------------------------//
+    if (campo === 'dni') {
+        var dni = document.getElementById(campo).value;
+        if (dni == null || dni.length == 0 || /^\s+$/.test(dni)) {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun numero de DNI.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            if (isNaN(dni)) {
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                $('#' + campo).parent().children('span').text("Solo se acepta números.").show();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                return false;
+            }
+            else {
+                if (!(/^\d{8}$/.test(dni))) {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                    $('#' + campo).parent().children('span').text("Debe ingresar solamente 8 digitos.").show();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                    return false;
+                }
+                else {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+                    $('#' + campo).parent().children('span').hide();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+                    return true;
+                }
+
+            }
+        }
+    }
+
+    //-------------------------------validacion E-mail-------------------------------------//
+    //-------------------------------validacion E-mail-------------------------------------//
+    //-------------------------------validacion E-mail-------------------------------------//
+    if (campo === 'email') {
+        var email = document.getElementById(campo).value;
+        if (email == null || email.length == 0 || /^\s+$/.test(email)) {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun Email.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            if (!(/\S+@\S+\.\S+/.test(email))) {
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                $('#' + campo).parent().children('span').text("Ingrese un Email valido.").show();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                return false;
+            }
+            else {
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback grupo_f");
+                $('#' + campo).parent().children('span').hide();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+                return true;
+            }
+        }
+
+    }
+
+    //-------------------------------validacion Radius Genero-------------------------------------//
+    //-------------------------------validacion Radius Genero-------------------------------------//
+    //-------------------------------validacion Radius Genero-------------------------------------//
+    if (campo === 'genderRadios') {
+        var opciones = document.getElementsByName(campo);
+        var seleccionado = false;
+        for (var i = 0; i < opciones.length; i++) {
+            if (opciones[i].checked) {
+                seleccionado = true;
+                break;
+            }
+        }
+
+        if (!seleccionado) {
+            $('#male').parent().parent().parent().attr("class", "form-group has-error has-feedback grupo_f grupo_f1");
+            //                    $('#male').parent().parent().next().append("<span id='sexo'  class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+        }
+        else {
+            // $("#sexo").remove();
+            $('#male').parent().parent().parent().attr("class", "form-group has-success grupo_f grupo_f1");
+            //                    $('#male').parent().parent().next().append("<span id='sexo'  class='glyphicon glyphicon-ok form-control-feedback'></span>");
+            return true;
+        }
+    }
+
+    //-------------------------------validacion Combobox carrera-------------------------------------//
+    //-------------------------------validacion Combobox carrera-------------------------------------//
+    //-------------------------------validacion Combobox carrera-------------------------------------//
+    if (campo === 'carrera') {
+        var indice = document.getElementById(campo).selectedIndex;
+        if (indice == null || indice == 0) {
+            $('#' + campo).parent().parent().attr("class", "form-group has-error");
+            return false;
+        }
+        else {
+            $('#' + campo).parent().parent().attr("class", "form-group has-success");
+            return true;
+        }
+    }
+
+    //-------------------------------validacion Datepicker fecha de Nac.-------------------------------------//
+    //-------------------------------validacion Datepicker fecha de Nac.-------------------------------------//
+    //-------------------------------validacion Datepicker fecha de Nac.-------------------------------------//
+    if (campo === 'fechanac') {
+        var fecha = document.getElementById(campo).value;
+        //alert(fecha);
+        if (fecha == null || fecha.length == 0 || /^\s+$/.test(fecha)) {
+            $('#' + campo).parent().parent().attr("class", "form-group fechaHeader has-error");
+            return false;
+        } else {
+            $('#' + campo).parent().parent().attr("class", "form-group fechaHeader has-success");
+            return true;
+        }
+    }
+
+    //-------------------------------validacion fecha de Nac. DIA-------------------------------------//
+    //-------------------------------validacion fecha de Nac. DIA-------------------------------------//
+    //-------------------------------validacion fecha de Nac. DIA-------------------------------------//
+    if (campo === 'fechaNac1') {
+        var indice1 = document.getElementById(campo).selectedIndex;
+        if (indice1 == null || indice1 == 0) {
+            $('#' + campo).parent().parent().attr("class", "form-group has-error");
+            $('#' + campo).parent().children('span').text("Dia*.").show();
+            return false;
+        }
+        else {
+            $('#' + campo).parent().children('span').remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success");
+            contador = contador + 1;
+            //alert(contador);
+            return true;
+        }
+    }
+
+    //-------------------------------validacion fecha de Nac. MES-------------------------------------//
+    //-------------------------------validacion fecha de Nac. MES-------------------------------------//
+    //-------------------------------validacion fecha de Nac. MES-------------------------------------//
+    if (campo === 'fechaNac2') {
+        var indice2 = document.getElementById(campo).selectedIndex;
+        if (indice2 == null || indice2 == 0) {
+            $('#' + campo).parent().parent().attr("class", "form-group has-error");
+            $('#' + campo).parent().children('span').text("Mes*.").show();
+            return false;
+        }
+        else {
+            $('#' + campo).parent().children('span').remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success");
+            contador = contador + 1;
+            //alert(contador);
+            return true;
+        }
+    }
+
+    //-------------------------------validacion fecha de Nac. AÑO-------------------------------------//
+    //-------------------------------validacion fecha de Nac. AÑO-------------------------------------//
+    //-------------------------------validacion fecha de Nac. AÑO-------------------------------------//
+    if (campo === 'fechaNac3') {
+        var indice3 = document.getElementById(campo).selectedIndex;
+        if (indice3 == null || indice3 == 0) {
+            $('#' + campo).parent().parent().attr("class", "form-group has-error");
+            $('#' + campo).parent().children('span').text("Año*.").show();
+            return false;
+        }
+        else {
+            $('#' + campo).parent().children('span').remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success");
+            contador = contador + 1;
+            //alert(contador);
+            return true;
+        }
+    }
+
+
+    //-------------------------------validacion password-------------------------------------//
+    //-------------------------------validacion password-------------------------------------//
+    //-------------------------------validacion password-------------------------------------//
+    if (campo === 'contrasena') {
+        var pass = document.getElementById(campo).value;
+        if (pass == null || pass.length == 0 || /^\s+$/.test(pass)) {
+
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese alguna contraseña.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+            $('#' + campo).parent().children('span').hide();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+            return true;
+
+        }
+    }
+
+    //-------------------------------validacion password2-------------------------------------//
+    //-------------------------------validacion password2-------------------------------------//
+    //-------------------------------validacion password2-------------------------------------//
+    if (campo === 'contrasena2') {
+        var pass = document.getElementById('contrasena').value;
+        var pass2 = document.getElementById(campo).value;
+        if (pass2 == null || pass2.length == 0 || /^\s+$/.test(pass2)) {
+
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese alguna contrseña.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        } else if (pass != pass2) {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Las contraseñas no coinciden.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+            $('#' + campo).parent().children('span').hide();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+            return true;
+
+        }
+    }
+
+    //-------------------------------validacion nombre-------------------------------------//
+    //-------------------------------validacion nombre-------------------------------------//
+    //-------------------------------validacion nombre-------------------------------------//
+    if (campo === 'nombre') {
+        var nombre = document.getElementById(campo).value;
+        if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
+
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun nombre.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+            $('#' + campo).parent().children('span').hide();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+            return true;
+
+        }
+    }
+
+    //-------------------------------validacion Apellido paterno-------------------------------------//
+    //-------------------------------validacion Apellido paterno-------------------------------------//
+    //-------------------------------validacion Apellido paterno-------------------------------------//
+    if (campo === 'apaterno') {
+        var apellidop = document.getElementById(campo).value;
+        if (apellidop == null || apellidop.length == 0 || /^\s+$/.test(apellidop)) {
+
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun apellido paterno.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+            $('#' + campo).parent().children('span').hide();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+            return true;
+
+        }
+    }
+
+    //-------------------------------validacion Apellido materno-------------------------------------//
+    //-------------------------------validacion Apellido materno-------------------------------------//
+    //-------------------------------validacion Apellido materno-------------------------------------//
+    if (campo === 'amaterno') {
+        var apellidom = document.getElementById(campo).value;
+        if (apellidom == null || apellidom.length == 0 || /^\s+$/.test(apellidom)) {
+
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun apellido materno.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+            $('#' + campo).parent().children('span').hide();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+            return true;
+
+        }
+    }
+
+    //-------------------------------validacion Celular-------------------------------------//
+    //-------------------------------validacion Celular-------------------------------------//
+    //-------------------------------validacion Celular-------------------------------------//
+    if (campo === 'celular') {
+        var celular = document.getElementById(campo).value;
+        if (celular == null || celular.length == 0 || /^\s+$/.test(celular)) {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun numero de DNI.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            if (isNaN(celular)) {
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                $('#' + campo).parent().children('span').text("Solo se acepta números.").show();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                return false;
+            }
+            else {
+                if (!(/^\d{9}$/.test(celular))) {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                    $('#' + campo).parent().children('span').text("Debe ingresar solamente 9 digitos.").show();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                    return false;
+                }
+                else {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+                    $('#' + campo).parent().children('span').hide();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+                    return true;
+                }
+
+            }
+        }
+    }
+
+    //-------------------------------validacion Celular2-------------------------------------//
+    //-------------------------------validacion Celular2-------------------------------------//
+    //-------------------------------validacion Celular2-------------------------------------//
+    if (campo === 'celular2') {
+        var celfus2 = document.getElementById(campo).value;
+        if (celfus2 == null || celfus2.length == 0 || /^\s+$/.test(celfus2)) {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun numero de DNI.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            if (isNaN(celfus2)) {
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                $('#' + campo).parent().children('span').text("Solo se acepta números.").show();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                return false;
+            }
+            else {
+                if (!(/^\d{9}$/.test(celfus2))) {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                    $('#' + campo).parent().children('span').text("Debe ingresar solamente 9 digitos.").show();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                    return false;
+                }
+                else {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+                    $('#' + campo).parent().children('span').hide();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+                    return true;
+                }
+
+            }
+        }
+    }
+
+    //-------------------------------validacion Telefono-------------------------------------//
+    //-------------------------------validacion Telefono-------------------------------------//
+    //-------------------------------validacion Telefono-------------------------------------//
+    if (campo === 'telefono') {
+        var telefono = document.getElementById(campo).value;
+        if (telefono == null || telefono.length == 0 || /^\s+$/.test(telefono)) {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun numero de DNI.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            if (isNaN(telefono)) {
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                $('#' + campo).parent().children('span').text("Solo se acepta números.").show();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                return false;
+            }
+            else {
+                if (!(/^\d{9}$/.test(telefono))) {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                    $('#' + campo).parent().children('span').text("Debe ingresar solamente 9 digitos.").show();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                    return false;
+                }
+                else {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+                    $('#' + campo).parent().children('span').hide();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+                    return true;
+                }
+
+            }
+        }
+    }
+
+    //-------------------------------validacion Telefono2-------------------------------------//
+    //-------------------------------validacion Telefono2-------------------------------------//
+    //-------------------------------validacion Telefono2-------------------------------------//
+    if (campo === 'telefono2') {
+        var telfis2 = document.getElementById(campo).value;
+        if (telfis2 == null || telfis2.length == 0 || /^\s+$/.test(telfis2)) {
+            $("#glypcn" + campo).remove();
+            $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+            $('#' + campo).parent().children('span').text("Ingrese algun numero de DNI.").show();
+            $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+            return false;
+
+        }
+        else {
+            if (isNaN(telfis2)) {
+                $("#glypcn" + campo).remove();
+                $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                $('#' + campo).parent().children('span').text("Solo se acepta números.").show();
+                $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                return false;
+            }
+            else {
+                if (!(/^\d{9}$/.test(telfis2))) {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-error has-feedback grupo_f");
+                    $('#' + campo).parent().children('span').text("Debe ingresar solamente 9 digitos.").show();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+                    return false;
+                }
+                else {
+                    $("#glypcn" + campo).remove();
+                    $('#' + campo).parent().parent().attr("class", "form-group has-success has-feedback");
+                    $('#' + campo).parent().children('span').hide();
+                    $('#' + campo).parent().append("<span id='glypcn" + campo + "' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+                    return true;
+                }
+
+            }
+        }
+    }
+    //if(contador==3){
+    //    $('#fechaNac3').parent().parent().attr("class", "form-group has-success");
+    //} 
+
+}
+

@@ -11,6 +11,7 @@ use App\EstandarPrograma;
 
 class PagesController extends Controller
 {
+
     public function inicio()
     {
         return view('acreditacion');

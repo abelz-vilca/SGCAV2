@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//mostrar login
+
+
+
 
 //PRUEBA PARA INPUT
 Route::get('/subir', 'PruebaController@subirArchivo')->name('subir');
@@ -29,17 +33,10 @@ route::get('/errors', 'ProgramaController@error')->name('errors');
 //para devolver criterio
 Route::get('/criterios', 'CriterioController@create')->name('criterios');
 
+//devolver docentes USUARIO
+Route::get('/usuario', 'UsuarioController@creates')->name('usuario');
 
-Route::get('', function () {
-    return view('');
-});
 
-Route::get('/inicio', function () {
-    return view('layouts.plantilla');
-});
-Route::get('', function () {
-    return view('welcome');
-});
 // ************************************************************************************
 // OTROS RUTAS DEL SISTEMA
 // ************************************************************************************
@@ -82,7 +79,3 @@ Route::get('/totalestandares', ['as' => 'totalestandar', 'uses' => 'PagesControl
 // *******************************************************************************************************
 
 Route::get('reporte', 'PagesController@reportes')->name('reportes');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

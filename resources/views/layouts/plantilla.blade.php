@@ -48,7 +48,8 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{route('login')}}">
+                    <a class="navbar-brand" href="">
+
                         <!-- PARA IR AL INICIO -->
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -105,7 +106,7 @@
                                             </div>
                                             <div class="u-text">
                                                 <h4>Perfil 01</h4>
-                                                <p class="text-muted">vilcabl@gmail.com</p><a href=""
+                                                <p class="text-muted">vilcabl10@gmail.com</p><a href=""
                                                     class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a>
                                             </div>
                                         </div>
@@ -148,8 +149,7 @@
                         <h5>Oficina Calidad</h5>
                         <!-- <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a> -->
                         <!-- <a href="app-email.html" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a> -->
-                        <a href="{{route('login')}}" class="" data-toggle="tooltip" title="Logout"><i
-                                class="mdi mdi-power"></i></a>
+                        <a href="" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
 
                     </div>
                 </div>
@@ -201,8 +201,9 @@
                     <!-- <h3 class="text-themecolor">Home</h3> -->
                 </div>
                 <div class="col-md-7 align-self-center">
+
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{route('login')}}">INICIO</a></li>
+                        <li class="breadcrumb-item"><a href="">INICIO</a></li>
                         <!-- <li class="breadcrumb-item">pages</li>
                         <li class="breadcrumb-item active">Animation</li> -->
                     </ol>
