@@ -12,6 +12,10 @@ use App\EstandarPrograma;
 class PagesController extends Controller
 {
 
+    public function iniciar()
+    {
+        return view('layouts.plantilla');
+    }
     public function inicio()
     {
         return view('acreditacion');

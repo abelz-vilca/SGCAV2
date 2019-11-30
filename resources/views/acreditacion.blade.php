@@ -53,8 +53,9 @@
 
             </div>
             <a class="btn btn-info" href="programas">CALIFICAR PROGRAMAS</a>
-            <p></p>
-            <a class="btn btn-danger" href="actualizardatos">Actualizar Datos</a>
+            <hr>
+            <p>Estimados Docentes actualizar los datos de los miembros de comités de autoevaluación</p>
+            <a class="btn btn-danger" href="actualizardatos">Actualizar Datos Miembros</a>
         </div>
 
     </div>

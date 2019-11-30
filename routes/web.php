@@ -10,9 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//comando de ayuda para proteger rutas poner en cada controlador XD
+// public function __construct()
+//     {
+//         $this->middleware('auth');
+//     }
 //mostrar login
 
 
+//pantalla principal
+Route::get('/inicio', 'PagesController@iniciar')->name('inicio');
 
 
 //PRUEBA PARA INPUT

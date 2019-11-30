@@ -2,63 +2,73 @@
 
 @section('name')
 
-
-<div align="center" class="container-fluid container-my-4">
-    <h4>CALIFICACION DE LOS CRITERIOS</h4>
-    {{-- <div class="card-header">{{$criterioestandar->fecha->format('d M Y')}}
-</div> --}}
-</div>
-<div class="container-fluid" class="container-my-4">
-
-    <table class="table table-striped table-bordered" id="estandar_detalle" align="center">
-        <thead class="table table-striped">
-            <tr align="center" class="bg-info">
-                <th scope="col">#ID</th>
-                <th scope="col">Archivo</th>
-                <th scope="col">Cumplimiento</th>
-                {{-- <th scope="col">Descripcion</th> --}}
-                <th scope="col">Justificacion</th>
-                <th scope="col">Fecha</th>
-                {{-- <th scope="col">C</th>
+<div class="container-fluid" class="container-my-2">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">CALIFICACION DE LOS CRITERIOS</h4>
+            <div class="table-responsive m-t-10">
+                <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0"
+                    width="100%" id="estandar_detalle" align="center">
+                    <thead class="table table-striped">
+                        <tr align="center" class="bg-info">
+                            <th scope="col">N°</th>
+                            <th scope="col">Archivo</th>
+                            <th scope="col">Cumplimiento</th>
+                            {{-- <th scope="col">Descripcion</th> --}}
+                            <th scope="col">Justificacion</th>
+                            <th scope="col">Fecha</th>
+                            {{-- <th scope="col">C</th>
                 <th scope="col">E</th>
                 <th scope="col">P</th> --}}
-                {{-- <th scope="col">P_id</th> --}}
-                <th align="center" scope="col">Accion</th>
-                <th align="center" scope="col">Proceso</th>
-            </tr>
-        </thead>
-        <tbody>
+                            {{-- <th scope="col">P_id</th> --}}
+                            <th disabled="disabled" scope="col">Accion</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-            {{-- @foreach ($estandarprograma as $item ) --}}
-            @foreach ($devolverprograma as $item )
-            <tr disabled="disabled" class="table-light">
-                <th scope="row">{{$item->id}}</th>
-                <td align="center"><a href="{{Storage::url($item->archivo)}}" target="_blank">verificar Doc. criteerio
-                        {{$item->id}}</a>
-                </td>
-                <td align="center">{{$item->calificacion}}</td>
-                {{-- <td align="center">{{$item->descripcion}}</td> --}}
-                <td align="center">{{$item->justificacion}}</td>
-                <td align="center">{{$item->fecha}}</td>
-                {{-- <td align="center">{{$item->criterio_id}}</td>
-                <td align="center">{{$item->estandar_id}}</td>
-                <td align="center">{{$item->programa_id}}</td> --}}
-                <td class="" align="center">
+                        {{-- @foreach ($estandarprograma as $item ) --}}
+                        @foreach ($devolverprograma as $item )
+                        <tr class="table-light">
+                            <th scope="row">{{$item->id}}</th>
+                            <td align="center"><a href="{{Storage::url($item->archivo)}}" target="_blank">verificar Doc.
+                                    criteerio
+                                    {{$item->id}}</a>
+                            </td>
+                            <td align="center">{{$item->calificacion}}</td>
+                            {{-- <td align="center">{{$item->descripcion}}</td> --}}
+                            <td align="center">{{$item->justificacion}}</td>
+                            <td align="center">{{$item->fecha}}</td>
+                            {{-- <td align="center">{{$item->criterio_id}}</td>
+                            <td align="center">{{$item->estandar_id}}</td>
+                            <td align="center">{{$item->programa_id}}</td> --}}
+                            <td>
 
-                    <a href="{{route('criterio.editar', $item)}}" type="button" class="btn btn-info">Calificar</a>
-                    <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
-                        class="btn btn-info">Verificar Documento</a>
-                </td>
-                <td>
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                </td>
+                                <a href="{{route('criterio.editar', $item)}}" type="button"
+                                    class="btn btn-info">Calificar</a>
+                                {{-- <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
+                                class="btn btn-info">Verificar Documento</a> --}}
+                            </td>
+                            <td disabled>
 
-            </tr>
+                                <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
+                                    class="btn btn-warning"><img src="{{asset('imagenes/check.png')}}" width="20"
+                                        height="20">por verificar</a>
+                                {{-- <a disabled="true" href="{{Storage::url($item->archivo)}}" target="_blank"
+                                type="button"
+                                class="btn btn-success">verificado</a> --}}
 
-            @endforeach()
-        </tbody>
-    </table>
+
+                            </td>
+
+                        </tr>
+
+                        @endforeach()
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
 

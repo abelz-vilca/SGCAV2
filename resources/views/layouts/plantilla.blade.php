@@ -222,11 +222,11 @@
 
 
 
-                <main>
-                    <div class="m-2">
-                        @yield('name')
-                    </div>
-                </main>
+                {{-- <main>
+                    <div class="m-1"> --}}
+                @yield('name')
+                {{-- </div>
+                </main> --}}
 
 
 
