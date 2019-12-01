@@ -46,7 +46,7 @@ class UsuariosTableSeeder extends Seeder
             ],
             //EDUCACIÓN INICIAL
             [
-                'nombres' => 'BRUNILDA AILLY ', 'apellido_paterno' => 'ACOSTA', 'apellido_materno' => 'MELCHOR',
+                'nombres' => 'BRUNILDA AILLY', 'apellido_paterno' => 'ACOSTA', 'apellido_materno' => 'MELCHOR',
                 'dni' => '85858585', 'email' => 'aillybru@gmail.com', 'password' => bcrypt('170800489'),
                 'rol' => 'docente', 'cel' => '966680031', 'programa_id' => '6'
             ],

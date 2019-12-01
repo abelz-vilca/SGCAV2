@@ -96,17 +96,20 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                    src="{{asset('assets/images/users/profile.png')}}" alt="user"
-                                    class="profile-pic" /></a>
+                                    src="{{asset('assets/images/users/login.jpg')}}" alt="user" width="50px"
+                                    height="30px" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right scale-up">
                                 <ul class="dropdown-user">
                                     <li>
                                         <div class="dw-user-box">
-                                            <div class="u-img"><img src="../assets/images/users/profile.png" alt="user">
+                                            <div class="u-img"><img src="../assets/images/users/login.jpg" alt="user">
                                             </div>
                                             <div class="u-text">
-                                                <h4>Perfil 01</h4>
-                                                <p class="text-muted">vilcabl10@gmail.com</p><a href=""
+                                                <h4> @auth
+                                                    {{auth()->user()->name}}
+                                                    @endauth</h4>
+                                                <p class="text-muted"> {{auth()->user()->email}}</p>
+                                                <p class="text-muted">Telefono</p><a href=""
                                                     class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a>
                                             </div>
                                         </div>
@@ -118,7 +121,26 @@
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#"><i class="ti-settings"></i> Configuración de cuenta</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="fa fa-power-off"></i> Cerrar Sesion</a></li>
+                                    <!-- -->
+                                    {{-- <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('CERRAR SESION') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                    </form> --}}
+                                    <!-- -->
+                                    <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                            {{ __('CERRAR SESION') }}<i class="fa fa-power-off"></i></a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -203,7 +225,8 @@
                 <div class="col-md-7 align-self-center">
 
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="">INICIO</a></li>
+
+                        <li class="breadcrumb-item"><a href="{{route('acreditacion')}}">INICIO</a></li>
                         <!-- <li class="breadcrumb-item">pages</li>
                         <li class="breadcrumb-item active">Animation</li> -->
                     </ol>

@@ -16,6 +16,7 @@
 //         $this->middleware('auth');
 //     }
 //mostrar login
+Route::get('/', 'PagesController@primero')->name('primero');
 
 
 //pantalla principal
@@ -86,3 +87,5 @@ Route::get('/totalestandares', ['as' => 'totalestandar', 'uses' => 'PagesControl
 // *******************************************************************************************************
 
 Route::get('reporte', 'PagesController@reportes')->name('reportes');
+
+Auth::routes();

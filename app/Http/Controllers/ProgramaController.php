@@ -37,6 +37,7 @@ class ProgramaController extends Controller
 
     public function create()
     {
+
         $programas = App\Programa::all();
         return view('programas', compact('programas'));
     }

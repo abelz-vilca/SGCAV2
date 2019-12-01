@@ -11,15 +11,19 @@ use App\EstandarPrograma;
 
 class PagesController extends Controller
 {
-
-    public function iniciar()
+    public function primero()
     {
-        return view('layouts.plantilla');
+        return view('auth.login');
     }
     public function inicio()
     {
         return view('acreditacion');
     }
+    public function iniciar()
+    {
+        return view('layouts.plantilla');
+    }
+
     public function datos()
     {
         return view('actualizardatos');
