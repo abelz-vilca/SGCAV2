@@ -8,7 +8,7 @@ class Criterio extends Model
 {
     protected $table = 'criterios';
     protected $fillable = [
-        'id',
+        
         'nombre_criterio',
 
 

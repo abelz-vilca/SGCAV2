@@ -34,13 +34,13 @@ class DatabaseSeeder extends Seeder
             AcademicosTableSeeder::class,
             ProgramasTableSeeder::class,
             EspecialidadesTableSeeder::class,
-            // UsersTableSeeder::class,
+            UsersTableSeeder::class,
             Estandar_programaTableSeeder::class,
             CriteriosTableSeeder::class,
             Criterio_estandarTableSeeder::class,
             // UsuariosTableSeeder::class,
             // Criterios_estandaresTableSeeder::class,
-            UsuariosTableSeeder::class,
+            // UsuariosTableSeeder::class,
             // Estandares_ProgramasTableSeeder::class
             //DocentesTableSeeder::class,
         ]);

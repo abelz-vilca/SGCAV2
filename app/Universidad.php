@@ -8,7 +8,7 @@ class Universidad extends Model
 {
     protected $table = 'universidades';
     protected $fillable = [
-            'id',
+            
          'nombre_universidad',
          'direccion_universidad',
          'telefono',

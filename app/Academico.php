@@ -8,7 +8,7 @@ class Academico extends Model
 {
     protected $table = 'academicos';
    protected $fillable = [
-   		'id',
+   		
         'nombre_academico',
         'facultad_id'
         

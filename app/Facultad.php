@@ -8,7 +8,7 @@ class Facultad extends Model
 {
     protected $table = 'facultades';
     protected $fillable = [
-        'id',
+        
         'nombre_facultad',
         'universidad_id'
 

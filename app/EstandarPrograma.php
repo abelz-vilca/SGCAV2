@@ -9,7 +9,7 @@ class EstandarPrograma extends Model
     //
     protected $table = "estandar_programa";
     protected $fillable = [
-        'id',
+       
         'archivo',
         'calificacion',
         'descripcion',

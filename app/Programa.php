@@ -8,7 +8,7 @@ class Programa extends Model
 {
     protected $table = 'programas';
     protected $fillable = [
-        'id',
+       
         'nombre_programa',
         'CUI',/*código único de identificación*/
         'academico_id',

@@ -8,7 +8,7 @@ class Factor extends Model
 {
     protected $table = 'factores';
     protected $fillable = [
-            'id',
+            
          'nombre_factor',
          'factor_id'
          

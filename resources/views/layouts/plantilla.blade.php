@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
     <title>OGCA</title>
     <!-- Bootstrap Core CSS -->
-    <link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <!-- You can change the theme colors from here -->

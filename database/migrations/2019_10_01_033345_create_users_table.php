@@ -19,7 +19,10 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->unsignedBigInteger('programa_id')->nullable();;
+            $table->string('rol');
+            $table->string('telefono', 9)->nullable();
+            $table->tinyInteger('estado')->default('1'); 
+            $table->unsignedBigInteger('programa_id');
             $table->foreign('programa_id')->references('id')->on('programas')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();

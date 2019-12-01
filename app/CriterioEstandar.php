@@ -8,7 +8,7 @@ class CriterioEstandar extends Model
 {
     protected $table = "criterio_estandar";
     protected $fillable = [
-        'id',
+        
         'archivo',
         'calificacion',
         'descripcion',

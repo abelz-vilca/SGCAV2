@@ -8,7 +8,7 @@ class Estandar extends Model
 {
     protected $table = 'estandares';
     protected $fillable = [
-        'id',
+       
         'nombre_estandar',
         'factor_id'
 
