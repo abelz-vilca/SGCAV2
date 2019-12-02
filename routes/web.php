@@ -29,6 +29,10 @@ Route::post('/subirs', ['as' => 'subir.archivo', 'uses' => 'PruebaController@cre
 //prueba grafico
 Route::get('/grafic', 'PruebaController@grafic')->name('grafic');
 Route::get('/grafic2', 'PruebaController@grafic2')->name('grafic2');
+
+//RUTAS PARA REPORTES
+Route::get('/reportestandar', 'ReporteController@reportestandar')->name('reportestandar');
+
 //prueba para formulario
 Route::get('/editarestandar', 'PruebaController@editarestandar')->name('editarestandar');
 
@@ -51,8 +55,6 @@ Route::get('/usuario', 'UsuarioController@creates')->name('usuario');
 
 Route::get('/programas', 'ProgramaController@create')->name('programa');
 Route::get('/actualizardatos', 'PagesController@datos')->name('actualizardatos');
-
-
 
 
 //mostrar lista de progrmas
@@ -91,4 +93,3 @@ Route::get('reporte', 'PagesController@reportes')->name('reportes');
 
 // Auth::routes();
 Auth::routes(['register' => false]);
-

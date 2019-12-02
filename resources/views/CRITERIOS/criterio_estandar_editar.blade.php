@@ -3,85 +3,86 @@
 @section('name')
 
 <div class="container-fluid" class="container-my-4">
-    
-        <div class="card-header">
-                CALIFICACÓN DE LOS CCRITERIOS
-              </div>
-           
-                <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0"
-                    width="100%" id="estandar_detalle" align="center">
-                    <thead class="table table-striped">
-                        <tr align="center" class="bg-info">
-                            <th scope="col">N°</th>
-                            <th scope="col">Archivo</th>
-                            <th scope="col">Cumplimiento</th>
-                            {{-- <th scope="col">Descripcion</th> --}}
-                            <th scope="col">Justificacion</th>
-                            <th scope="col">Fecha</th>
-                            {{-- <th scope="col">C</th>
+
+    <div class="card-header">
+        CALIFICACÓN DE LOS CRITERIOS
+    </div>
+    <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%"
+        id="estandar_detalle" align="center">
+        <thead class="table table-striped">
+            <tr align="center" class="bg-info">
+                <th scope="col">N°</th>
+                <th scope="col">Archivo</th>
+                <th scope="col">Cumplimiento</th>
+                {{-- <th scope="col">Descripcion</th> --}}
+                <th scope="col">Justificacion</th>
+                <th scope="col">Fecha</th>
+                {{-- <th scope="col">C</th>
                 <th scope="col">E</th>
                 <th scope="col">P</th> --}}
-                            {{-- <th scope="col">P_id</th> --}}
-                            <th disabled="disabled" scope="col">Accion</th>
-                            <th scope="col">Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                {{-- <th scope="col">P_id</th> --}}
+                <th disabled="disabled" scope="col">Accion</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
 
-                        {{-- @foreach ($estandarprograma as $item ) --}}
-                        @foreach ($devolverprograma as $item )
-                        <tr class="table-light">
-                            <th scope="row">{{$item->id}}</th>
-                            <td align="center"><a href="{{Storage::url($item->archivo)}}" target="_blank">verificar Doc.
-                                    criteerio
-                                    {{$item->id}}</a>
-                            </td>
-                            <td align="center">
-                                {{-- {{$item->calificacion}} --}}
-                                <?php
+            {{-- @foreach ($estandarprograma as $item ) --}}
+            @foreach ($devolverprograma as $item )
+            <tr class="table-light">
+                <th scope="row">{{$item->id}}</th>
+                <td align="center"><a href="{{Storage::url($item->archivo)}}" target="_blank">verificar Doc.
+                        criteerio
+                        {{$item->id}}</a>
+                </td>
+                <td align="center">
+                    {{-- {{$item->calificacion}} --}}
+                    <?php
                                       if ($item->calificacion==1){
                                         echo "SI";
                                     }else{
                                         echo "NO";
                                     }
-                                                                  ?> 
-                            </td>
-                            {{-- <td align="center">{{$item->descripcion}}</td> --}}
-                            <td align="center">{{$item->justificacion}}</td>
-                            <td align="center">{{$item->fecha}}</td>
-                            {{-- <td align="center">{{$item->criterio_id}}</td>
-                            <td align="center">{{$item->estandar_id}}</td>
-                            <td align="center">{{$item->programa_id}}</td> --}}
-                            <td>
+                                                                  ?>
+                </td>
+                {{-- <td align="center">{{$item->descripcion}}</td> --}}
+                <td align="center">{{$item->justificacion}}</td>
+                <td align="center">{{$item->fecha}}</td>
+                {{-- <td align="center">{{$item->criterio_id}}</td>
+                <td align="center">{{$item->estandar_id}}</td>
+                <td align="center">{{$item->programa_id}}</td> --}}
+                <td>
 
-                                <a href="{{route('criterio.editar', $item)}}">
-                                
-                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-primary">Calificar</button>
-                                     </a>
-                                {{-- <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
-                                class="btn btn-info">Verificar Documento</a> --}}
-                            </td>
-                            <td disabled>
-{{-- 
+                    <a href="{{route('criterio.editar', $item)}}">
+
+                        <button type="button"
+                            class="btn waves-effect waves-light btn-rounded btn-outline-primary">Calificar</button>
+                    </a>
+                    {{-- <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
+                    class="btn btn-info">Verificar Documento</a> --}}
+                </td>
+                <td disabled>
+                    {{-- 
                                 <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
-                                    class="btn btn-warning"><img src="{{asset('imagenes/check.png')}}" width="20"
-                                        height="20">por verificar</a> --}}
-                                        <button type="button"class="btn waves-effect waves-light btn-rounded btn-outline-success" data-toggle="button" aria-pressed="false">
-                                                <i class="ti-settings text" aria-hidden="true"></i>
-                                                <span class="text">por Verificar</span>
-                                                <i class="ti-check text-active" aria-hidden="true"></i>
-                                                <span class="text-active">Verificado</span>
-                                            </button>
+                    class="btn btn-warning"><img src="{{asset('imagenes/check.png')}}" width="20" height="20">por
+                    verificar</a> --}}
+                    <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-success"
+                        data-toggle="button" aria-pressed="false">
+                        <i class="ti-settings text" aria-hidden="true"></i>
+                        <span class="text">por Verificar</span>
+                        <i class="ti-check text-active" aria-hidden="true"></i>
+                        <span class="text-active">Verificado</span>
+                    </button>
 
 
-                            </td>
+                </td>
 
-                        </tr>
+            </tr>
 
-                        @endforeach()
-                    </tbody>
-                </table>
-      
+            @endforeach()
+        </tbody>
+    </table>
+
 </div>
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
 

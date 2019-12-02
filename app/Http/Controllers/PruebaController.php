@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App;
+use DB;
+use App\Dimension;
+use App\Docente;
+use App\EstandarPrograma;
+use App\CriterioEstandar;
+use app\User;
 use Carbon\Carbon;
 
 class PruebaController extends Controller
@@ -18,6 +24,25 @@ class PruebaController extends Controller
     {
         //
     }
+
+    ///PROBANDO SUMACRITERIOS
+    public function sumacriterio()
+    {
+        // $categorias = App\CriterioEstandar::where('estandar_id', 1)->get()->sum('calificacion');
+        // if (auth()->user()->rol == 'docente') {
+        //     $programas = App\Programa::where('id', auth()->user()->programa_id)->get();
+        // } else {
+        //     $programas = App\Programa::all();
+        // }
+        $estandar01 = App\CriterioEstandar::where('programa_id', '=', 1)
+            ->whereBetween('criterio_id', array(1, 3))->get()->sum('calificacion');
+
+        $E1 = round(((10) * $estandar01) / 3);
+
+        return view('reportes.sumaestandar', compact('estandar01', 'E1'));
+    }
+
+
     public function subirArchivo()
     {
         $pruebas = App\Prueba::all();
@@ -26,7 +51,6 @@ class PruebaController extends Controller
     }
     public function grafic()
     {
-
 
         return view('PRUEBAS.graficos');
     }
