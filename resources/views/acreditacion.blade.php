@@ -5,7 +5,10 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-body">
+                <div class="card-header">
+                        DATOS GENERALES
+                      </div>
+            <div class="card-body" style="background-color: #BDD7D6;">
                 <form>
                     <div class="row">
                         <div class="col-sm-6">
@@ -52,10 +55,13 @@
                 </form>
 
             </div>
-            <a class="btn btn-info" href="programas">CALIFICAR PROGRAMAS</a>
             <hr>
-            <p>Estimados Docentes actualizar los datos de los miembros de comités de autoevaluación</p>
-            <a class="btn btn-danger" href="actualizardatos">Actualizar Datos Miembros</a>
+            <a class="btn waves-effect waves-light btn-rounded btn-info" href="programas">CALIFICAR PROGRAMAS</a>
+          
+            <hr>
+            <a class="btn waves-effect waves-light btn-rounded btn-warning" href="actualizardatos">Actualizar Datos Miembros</a>
+            
+            <h3 class="text center-block"> Estimados Docentes debe actualizar los datos de los miembros de comités de autoevaluación</h3>
         </div>
 
     </div>

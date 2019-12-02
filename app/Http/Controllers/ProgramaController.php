@@ -38,7 +38,16 @@ class ProgramaController extends Controller
     public function create()
     {
 
+        // $programas = App\Programa::all();
+        
+       if (auth()->user()->rol=='docente'){
+        $programas = App\Programa::where('id',auth()->user()->programa_id)->get();
+       }else{
         $programas = App\Programa::all();
+        }
+                                                                  
+        // $programas = App\Programa::where('id',auth()->user()->programa_id)->get();
+       
         return view('programas', compact('programas'));
     }
     public function creates()

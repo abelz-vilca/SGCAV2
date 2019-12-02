@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header" align="center"><img src="{{asset('imagenes/logoinicio.png')}}" width="450"
+                <div class="card-header" align="center"><img src="{{asset('imagenes/logoinicio.png')}}" width="400"
                         height="60" alt="">
                     <div class="card-header" align="center">
                         {{ __('Página de Inicio') }}</div>

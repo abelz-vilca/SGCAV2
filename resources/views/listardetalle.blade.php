@@ -71,7 +71,7 @@
                 $(document).ready(function() {
                     $('#link_archivo').DataTable({
             "language": lenguaje_espanol
-               
+            // table.rows('.important').deselect();  
         } );
                    
                 });

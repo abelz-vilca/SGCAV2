@@ -62,7 +62,7 @@
                 $(document).ready(function() {
                     $('#estandar_detalle').DataTable({
             "language": lenguaje_espanol
-                          
+            table.rows('.important').deselect();            
         } );
                    
                 });

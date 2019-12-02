@@ -3,22 +3,12 @@
 @section('name')
 
 
-<div align="center" class="container-fluid container-my-4">
-    <h1>CALIFICACION DE LOS ESTANDARES</h1>
-    {{-- <form>
-        <div class="form-group">
-            <label for="formGroupExampleInput">PROGRAMA DE ESTUDIOS</label>
-            <p><input disabled="disabled" class="form-control" type="text" name="fecha" value=""></p>
-        </div>
-        {{-- <div class="form-group">
-            <label for="formGroupExampleInput2">VER TABLA DE CALIFICACION</label>
-            <a href="#" class="btn btn-warning pull-right" data-toggle="modal" data-target="#create">VER</a>
-            
-        </div> --}}
-    {{-- </form> --}}
-</div>
+ 
 <div class="container-fluid" class="container-my-4">
-
+        
+        <div class="card-header">
+                CALIFICACÓN DE LOS ESTÁNDARES
+              </div>
     <table class="table table-striped table-bordered" id="estandar_detalle" align="center">
         <thead class="table table-striped">
             <tr align="center" class="bg-info">
@@ -78,6 +68,8 @@
     </table>
     {{-- @include('modal') --}}
 </div>
+
+
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
 
 <!-- Editable -->
@@ -90,7 +82,7 @@
                 $(document).ready(function() {
                     $('#estandar_detalle').DataTable({
             "language": lenguaje_espanol
-                          
+            table.rows('.important').deselect();          
         } );
                    
                 });

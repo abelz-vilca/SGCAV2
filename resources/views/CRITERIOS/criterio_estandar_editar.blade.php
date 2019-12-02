@@ -2,11 +2,12 @@
 
 @section('name')
 
-<div class="container-fluid" class="container-my-2">
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title">CALIFICACION DE LOS CRITERIOS</h4>
-            <div class="table-responsive m-t-10">
+<div class="container-fluid" class="container-my-4">
+    
+        <div class="card-header">
+                CALIFICACÓN DE LOS CCRITERIOS
+              </div>
+           
                 <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0"
                     width="100%" id="estandar_detalle" align="center">
                     <thead class="table table-striped">
@@ -35,7 +36,16 @@
                                     criteerio
                                     {{$item->id}}</a>
                             </td>
-                            <td align="center">{{$item->calificacion}}</td>
+                            <td align="center">
+                                {{-- {{$item->calificacion}} --}}
+                                <?php
+                                      if ($item->calificacion==1){
+                                        echo "SI";
+                                    }else{
+                                        echo "NO";
+                                    }
+                                                                  ?> 
+                            </td>
                             {{-- <td align="center">{{$item->descripcion}}</td> --}}
                             <td align="center">{{$item->justificacion}}</td>
                             <td align="center">{{$item->fecha}}</td>
@@ -44,19 +54,24 @@
                             <td align="center">{{$item->programa_id}}</td> --}}
                             <td>
 
-                                <a href="{{route('criterio.editar', $item)}}" type="button"
-                                    class="btn btn-info">Calificar</a>
+                                <a href="{{route('criterio.editar', $item)}}">
+                                
+                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-primary">Calificar</button>
+                                     </a>
                                 {{-- <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
                                 class="btn btn-info">Verificar Documento</a> --}}
                             </td>
                             <td disabled>
-
+{{-- 
                                 <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
                                     class="btn btn-warning"><img src="{{asset('imagenes/check.png')}}" width="20"
-                                        height="20">por verificar</a>
-                                {{-- <a disabled="true" href="{{Storage::url($item->archivo)}}" target="_blank"
-                                type="button"
-                                class="btn btn-success">verificado</a> --}}
+                                        height="20">por verificar</a> --}}
+                                        <button type="button"class="btn waves-effect waves-light btn-rounded btn-outline-success" data-toggle="button" aria-pressed="false">
+                                                <i class="ti-settings text" aria-hidden="true"></i>
+                                                <span class="text">por Verificar</span>
+                                                <i class="ti-check text-active" aria-hidden="true"></i>
+                                                <span class="text-active">Verificado</span>
+                                            </button>
 
 
                             </td>
@@ -66,9 +81,7 @@
                         @endforeach()
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
+      
 </div>
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
 
@@ -82,7 +95,7 @@
                 $(document).ready(function() {
                     $('#estandar_detalle').DataTable({
             "language": lenguaje_espanol
-                          
+            // table.rows('.important').deselect();          
         } );
                    
                 });

@@ -8,6 +8,7 @@ use App;
 use App\Dimension;
 use App\Docente;
 use App\EstandarPrograma;
+use app\User;
 
 class PagesController extends Controller
 {
@@ -20,8 +21,16 @@ class PagesController extends Controller
         return view('acreditacion');
     }
     public function iniciar()
+
     {
-        return view('layouts.plantilla');
+        // {{auth()->user()->rol}
+        $rol = App\User::all();
+
+        // $roles = App\User::where('id', auth()->user()->programa_id)->get();
+
+        // $roless = App\CriterioEstandar::findOrFail(auth()->user()->programa_id);
+
+        return view('layouts.plantilla', compact('rol', 'roles','roless'));
     }
 
     public function datos()
@@ -31,8 +40,18 @@ class PagesController extends Controller
 
     public function reporte()
     {
-        $programas = App\Programa::all();
-        return view('reportes.reporteprogramas', compact('programas'));
+        if (auth()->user()->rol=='docente'){
+            return view('error');
+            // return view('reportes.reporteprogramas', compact('programas','error'))
+            // print '<script language="JavaScript">';
+            // print 'alert("NO TIENE ACCESO A ESTE MENU  click atras");';
+            //  print '</script>';
+            // $programas = App\Programa::where('id',auth()->user()->programa_id)->get();
+           }else{
+            $programas = App\Programa::all();
+            }
+       
+        return view('reportes.reporteprogramas', compact('programas','error'));
     }
     public function reportes()
     {

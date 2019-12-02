@@ -227,6 +227,12 @@ class UsersTableSeeder extends Seeder
                 'email' => 'bebepipiripi@hotmail.com', 'password' => Hash::make('170800470'),
                 'rol' => 'docente', 'telefono' => '999030495', 'programa_id' => '33'
             ],
+            //Admin
+            [
+                'name' => 'abl',
+                'email' => 'vilcabl10@gmail.com', 'password' => Hash::make('12345678'),
+                'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
+            ],
 
         ]);
     }

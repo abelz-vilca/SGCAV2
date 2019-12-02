@@ -1,5 +1,5 @@
 /*
-Template Name: Admin Press Admin
+Template Name: admin ogca
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -7,7 +7,7 @@ File: scss
 /*
 Template Name: Admin Press Admin
 Author: Themedesigner
-Email: niravjoshi87@gmail.com
+Email: vilcabl10@gmail.com
 File: scss
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
@@ -40,7 +40,7 @@ File: scss
 }
 
 .topbar .navbar-header {
-  background: #ffffff;
+  background: #9c9c9c;
 }
 
 .topbar .top-navbar .navbar-header .navbar-brand .light-logo {
@@ -49,7 +49,7 @@ File: scss
 }
 
 .topbar .navbar-light .navbar-nav .nav-item > a.nav-link {
-  color: #ffffff !important;
+  color: #660033 !important;
 }
 
 .topbar .navbar-light .navbar-nav .nav-item > a.nav-link:hover,
@@ -75,8 +75,8 @@ a.link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #1976d2;
-  border-color: #1976d2;
+  background-color: #660033;
+  border-color: #660033;
 }
 
 .right-sidebar .rpanel-title {

@@ -28,7 +28,7 @@
 }
 body {
     background: #fff;
-    font-family: "Poppins", sans-serif;
+    font-family:  /*"Poppins",*/Helvetica,Arial,Verdana,sans-serif; /*activando otro fuente*/
     margin: 0;
     overflow-x: hidden;
     /* color: #67757c; modificado color de label de inputs */
@@ -70,7 +70,7 @@ h4,
 h5,
 h6 {
     color: #455a64;
-    font-family: "Poppins", sans-serif;
+    font-family: /*"Poppins",*/ sans-serif,Times,serif,Georgia;
     font-weight: 400
 }
 h1 {

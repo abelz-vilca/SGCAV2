@@ -89,5 +89,6 @@ Route::get('/totalestandares', ['as' => 'totalestandar', 'uses' => 'PagesControl
 Route::get('reporte', 'PagesController@reportes')->name('reportes');
 
 
-Auth::routes();
-// Auth::routes(['register' => false]);
+// Auth::routes();
+Auth::routes(['register' => false]);
+

@@ -6,11 +6,14 @@
 <link rel="stylesheet" href="{{asset('tablas/css/dataTables.bootstrap4.min.css')}}">
 
 
-<div class="row">
-    <div class="col-12">
+
+<div class="card">
+        <div class="card-header">
+                PROGRAMA DE ESTUDIOS
+              </div>
         <div class="card">
             <div class="card-body" style="background-color: #BDD7D6;">
-                <table class="table table-striped table-bordered" id="editable-datatable">
+                <table class="display nowrap table table-hover table-striped table-bordered" id="editable-datatable">
                     <thead>
                         <tr align="center" class="bg-success">
                             <th scope="col">#ID</th>
@@ -29,14 +32,20 @@
                             <td>{{$item->CUI}}</td>
 
                             <td>
-                                <a href="{{route('estandar_programaid', $item)}}" type="button" class="btn btn-info">
+                                {{-- para calificar estandar--}}
+                                {{-- <a href="{{route('estandar_programaid', $item)}}" type="button" class="btn btn-info">
                                     <ion-icon name="clipboard"></ion-icon>
                                     ESTANDAR
-                                </a>
-                                <a href="{{route('criterio_programaid', $item)}}" type="button" class="btn btn-info">
+                                </a> --}}
+
+                                {{-- <a href="{{route('criterio_programaid', $item)}}" type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info">
                                     <ion-icon name="clipboard"></ion-icon>
-                                    CRITERIOS
-                                </a>
+                                  CRITERIOS
+                                </a> --}}
+                                <a href="{{route('criterio_programaid', $item)}}" >
+                                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-primary">CRITERIOS</button>
+                                     </a> 
+                                
 
                             </td>
                         </tr>
@@ -47,7 +56,6 @@
                 </table>
             </div>
         </div>
-    </div>
 </div>
 
 <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
@@ -62,9 +70,10 @@
                 $(document).ready(function() {
                     $('#editable-datatable').DataTable({
             "language": lenguaje_espanol
-                          
+           
+            // table.rows('.important').deselect();                  
         } );
-                   
+          
                 });
 
                 var lenguaje_espanol = {

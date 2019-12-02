@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
     <title>OGCA</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <!-- You can change the theme colors from here -->
@@ -54,7 +54,8 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
+                            {{-- <img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" /> --}}
+                            <img src=""  class="dark-logo" />
                             <!-- Light Logo icon -->
                             <img src="{{asset('assets/images/logo-light-icon.png')}}" alt="homepage"
                                 class="light-logo" />
@@ -94,10 +95,8 @@
                         <!-- ============================================================== -->
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                    src="{{asset('assets/images/users/login.jpg')}}" alt="user" width="50px"
-                                    height="30px" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" 
+                            aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right scale-up">
                                 <ul class="dropdown-user">
                                     <li>
@@ -108,8 +107,10 @@
                                                 <h4> @auth
                                                     {{auth()->user()->name}}
                                                     @endauth</h4>
+                                                    <p class="text-muted">Rol : {{auth()->user()->rol}}</p>
                                                 <p class="text-muted"> {{auth()->user()->email}}</p>
-                                                <p class="text-muted">Telefono</p><a href=""
+                                                <p class="text-muted">{{auth()->user()->telefono}}</p>
+                                                <a href=""
                                                     class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a>
                                             </div>
                                         </div>
@@ -119,7 +120,7 @@
                                     <li><a href="#"><i class="ti-wallet"></i> Mi Balance</a></li>
                                     <li><a href="#"><i class="ti-email"></i> Bandeja de Entrada</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="ti-settings"></i> Configuración de cuenta</a></li>
+                                    <li><a href="#"><i class="ti-settings"></i>Configuración de cuenta</a></li>
                                     <li role="separator" class="divider"></li>
                                     <!-- -->
                                     {{-- <a class="dropdown-item" href="{{ route('logout') }}"
@@ -135,7 +136,7 @@
                                     <!-- -->
                                     <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                                            {{ __('CERRAR SESION') }}<i class="fa fa-power-off"></i></a>
+                                            {{ __('CERRAR SESION') }}  <i class="  fa fa-power-off"> </i></a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                             style="display: none;">
                                             @csrf
@@ -168,7 +169,7 @@
                     </div>
                     <!-- User profile text-->
                     <div class="profile-text">
-                        <h5>Oficina Calidad</h5>
+                        <h5>Oficina General de Calidad y Acreditación</h5>
                         <!-- <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a> -->
                         <!-- <a href="app-email.html" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a> -->
                         <a href="" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
@@ -192,7 +193,14 @@
                                 <li> <a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
                                         <i class=" icon-chart"></i><span class="hide-menu"> REPORTES</span></a>
                                     <ul aria-expanded="false" class="collapse">
+                                            
+                                         
+                                             <li><a class="icon-crop" href="{{route('reporte')}}">PROGRAMAS</a></li>
+                                       
+                                                                        
+                                           
                                         <li><a class="icon-crop" href="{{route('reporte')}}">PROGRAMAS</a></li>
+
                                         <li><a class="icon-crop" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
                                         <li><a class="icon-graph" href="{{route('estandartotal')}}"> Estandares</a>
