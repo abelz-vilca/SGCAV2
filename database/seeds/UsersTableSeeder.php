@@ -241,7 +241,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'LUISA, ALCARRAZ  CURI',
                 'email' => 'luisa.alcarraz@unsch.edu.pe', 'password' => Hash::make('966052156'),
-                'rol' => 'Admin', 'telefono' => '966052156', 'programa_id' => '32'
+                'rol' => 'Admin', 'telefono' => '966052156', 'programa_id' => '1'
             ],
 
         ]);
