@@ -218,7 +218,7 @@ class UsersTableSeeder extends Seeder
             ],
             [
                 'name' => 'LUISA  , ALCARRAZ  CURI',
-                'email' => 'luisa.alcarraz@unsch.edu.pe', 'password' => Hash::make('170800493'),
+                'email' => 'luisa_alcarraz@hotmail.com', 'password' => Hash::make('170800493'),
                 'rol' => 'docente', 'telefono' => '966052156', 'programa_id' => '32'
             ],
             //ENFERMERÍA
@@ -229,9 +229,19 @@ class UsersTableSeeder extends Seeder
             ],
             //Admin
             [
-                'name' => 'abl',
-                'email' => 'vilcabl10@gmail.com', 'password' => Hash::make('12345678'),
+                'name' => 'Abl',
+                'email' => 'vilcabl10@gmail.com', 'password' => Hash::make('12345678/*'),
                 'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
+            ],
+            [
+                'name' => 'ING. teddy tafurg Guerra',
+                'email' => 'ttafurg@gmail.com', 'password' => Hash::make('999099214'),
+                'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
+            ],
+            [
+                'name' => 'LUISA, ALCARRAZ  CURI',
+                'email' => 'luisa.alcarraz@unsch.edu.pe', 'password' => Hash::make('966052156'),
+                'rol' => 'Admin', 'telefono' => '966052156', 'programa_id' => '32'
             ],
 
         ]);
