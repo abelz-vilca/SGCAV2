@@ -30,7 +30,7 @@ class PagesController extends Controller
 
         // $roless = App\CriterioEstandar::findOrFail(auth()->user()->programa_id);
 
-        return view('layouts.plantilla', compact('rol', 'roles','roless'));
+        return view('layouts.plantilla', compact('rol', 'roles', 'roless'));
     }
 
     public function datos()
@@ -40,18 +40,18 @@ class PagesController extends Controller
 
     public function reporte()
     {
-        if (auth()->user()->rol=='docente'){
+        if (auth()->user()->rol == 'docente') {
             return view('error');
             // return view('reportes.reporteprogramas', compact('programas','error'))
             // print '<script language="JavaScript">';
             // print 'alert("NO TIENE ACCESO A ESTE MENU  click atras");';
             //  print '</script>';
             // $programas = App\Programa::where('id',auth()->user()->programa_id)->get();
-           }else{
+        } else {
             $programas = App\Programa::all();
-            }
-       
-        return view('reportes.reporteprogramas', compact('programas','error'));
+        }
+
+        return view('reportes.reporteprogramas', compact('programas', 'error'));
     }
     public function reportes()
     {

@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use DB;
-use carbon\Carbon;
-use App\Estandar;
-use App\Criterio;
-use App\CriterioEstandar;
 use App;
+use DB;
+use App\Dimension;
+use App\Docente;
+use App\EstandarPrograma;
+use App\CriterioEstandar;
+use app\User;
+use Carbon\Carbon;
 
-class CriterioEstandarController extends Controller
+class ReporteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,12 +21,23 @@ class CriterioEstandarController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function reportestandar()
+    {
 
+        $e01 = App\CriterioEstandar::where('programa_id', '=', 1)
+            ->whereBetween('criterio_id', array(1, 3))->get()->sum('calificacion');
+        $e1 = round(((10) * $e01) / 3);
+
+        $e02 = App\CriterioEstandar::where('programa_id', '=', 2)
+            ->whereBetween('criterio_id', array(4, 4))->get()->sum('calificacion');
+        $e2 = round(((10) * $e01) / 3);
+
+        return view('reportes.sumaestandar', compact('e01', 'e1'));
+    }
     public function index()
     {
         //
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -35,13 +48,6 @@ class CriterioEstandarController extends Controller
     {
         //
     }
-    public function devolverprograma($programa_id)
-    {
-
-        $devolverprograma = App\CriterioEstandar::where('programa_id', $programa_id)->get();
-
-        return view('CRITERIOS.criterio_estandar_editar', compact('devolverprograma'));
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -49,6 +55,10 @@ class CriterioEstandarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function store(Request $request)
+    {
+        //
+    }
 
     /**
      * Display the specified resource.
@@ -72,14 +82,6 @@ class CriterioEstandarController extends Controller
         //
     }
 
-
-    public function editar($id)
-    {
-        $devolverisprograma = App\CriterioEstandar::findOrFail($id);
-
-        return view('CRITERIOS.calificarcriterio', compact('devolverisprograma'));
-    }
-
     /**
      * Update the specified resource in storage.
      *
@@ -88,32 +90,6 @@ class CriterioEstandarController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-
-        //
-    }
-    public function updates(Request $request, $id)
-    {
-        $request->validate([
-            'archivo' => 'required',
-            'calificacion' => 'required',
-            'justificacion' => 'required',
-
-        ]);
-        $criterioupdate = App\CriterioEstandar::findOrFail($id);
-
-        if ($request->hasFile('archivo')) {
-            $criterioupdate->archivo = $request->file('archivo')->store('public/Criterios');
-        }
-        $criterioupdate->calificacion = $request->calificacion;
-        $criterioupdate->justificacion = $request->justificacion;
-        // $criterioupdate->descripcion = $request->descripcion;
-        $criterioupdate->fecha = Carbon::now();
-
-        $criterioupdate->save();
-        return back()->with('mensaje', 'Calificacion actualizada');
-    }
-    public function store(Request $request)
     {
         //
     }

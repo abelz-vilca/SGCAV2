@@ -148,7 +148,7 @@
                             <!-- text-->
                             <div class="dropdown-divider"></div>
                             <!-- text-->
-                            <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> 
+                            <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i>
                                 Cerrar sesión</a>
                             <!-- text-->
                         </div>
@@ -209,13 +209,13 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
 
-                                                            
-                
-                                @yield('otro')
-                         
-                         
-                        
-                  
+
+
+                @yield('otro')
+
+
+
+
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->

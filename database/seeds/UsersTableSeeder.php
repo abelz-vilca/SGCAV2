@@ -17,16 +17,16 @@ class UsersTableSeeder extends Seeder
                 'name' => 'MARHLENI CERDA GOMEZ',
                 'email' => 'marhleni.cerda@unsch.edu.pe',
                 'password' => Hash::make('170800468'),
-                'rol' => 'docente', 
+                'rol' => 'docente',
                 'telefono' => '966938028',
                 'programa_id' => '1'
-                
+
             ],
             [
                 'name' => 'RUBEN ALFREDO MENESES ROJAS',
                 'email' => 'ruben.meneses@unsch.edu.pe',
                 'password' => Hash::make('170800468'),
-                'rol' => 'docente', 
+                'rol' => 'docente',
                 'telefono' => '982080006',
                 'programa_id' => '1'
 
@@ -36,17 +36,17 @@ class UsersTableSeeder extends Seeder
                 'name' => 'EFRAIN CHUCHON PRADO',
                 'email' => 'echpunsch@gmail.com',
                 'password' => Hash::make('170800492'),
-                'rol' => 'docente', 
+                'rol' => 'docente',
                 'telefono' => '992481516',
                 'programa_id' => '2'
             ],
             //INGENIERÍA AGROFORESTAL
             [
                 'name' => 'JOSE ANTONIO CORDERO GALINDO,',
-                'email' => 'ilvlexis2011@gmail.com', 
+                'email' => 'ilvlexis2011@gmail.com',
                 'password' => Hash::make('170800490'),
-                'rol' => 'docente', 
-                'telefono' => '950200688', 
+                'rol' => 'docente',
+                'telefono' => '950200688',
                 'programa_id' => '3'
             ],
             //MEDICINA VETERINARIA
@@ -54,14 +54,14 @@ class UsersTableSeeder extends Seeder
                 'name' => 'ALFREDO, POZO CURO',
                 'email' => 'alfredo.pozo@unsch.edu.pe',
                 'password' => Hash::make('170800491'),
-                'rol' => 'docente', 
+                'rol' => 'docente',
                 'telefono' => '966394237',
                 'programa_id' => '4'
             ],
             //EDUCACIÓN INICIAL
             [
                 'name' => 'BRUNILDA AILLY, ACOSTA MELCHOR',
-                'email' => 'aillybru@gmail.com', 
+                'email' => 'aillybru@gmail.com',
                 'password' => Hash::make('170800489'),
                 'rol' => 'docente',
                 'telefono' => '966680031',
@@ -74,7 +74,7 @@ class UsersTableSeeder extends Seeder
                 'rol' => 'docente', 'telefono' => '939727277',
                 'programa_id' => '7'
             ],
-          //EDUCACIÓN SECUNDARIA-Ingles y Lengua Española
+            //EDUCACIÓN SECUNDARIA-Ingles y Lengua Española
             [
                 'name' => 'FREDY, MORALES GUTIERREZ',
                 'email' => 'fremogu@yahoo.es', 'password' => Hash::make('170800484'),
@@ -171,19 +171,19 @@ class UsersTableSeeder extends Seeder
             //CIENCIAS FÍSICO MATEMÁTICAS-Estadistica
             [
                 'name' => 'IGNACIO RONALD , PRADO  SUMARI',
-                 'email' => 'ronald.prado@unsch.edu.pe', 'password' => Hash::make('170800476'),
+                'email' => 'ronald.prado@unsch.edu.pe', 'password' => Hash::make('170800476'),
                 'rol' => 'docente', 'telefono' => '966656556',  'programa_id' => '24'
             ],
             //CIENCIAS FÍSICO MATEMÁTICAS-Matemática
             [
                 'name' => 'VICTOR RAUL , VIVANCO  GARFIAS',
-                 'email' => 'vivagafias@hotmail.com', 'password' => Hash::make('170800475'),
+                'email' => 'vivagafias@hotmail.com', 'password' => Hash::make('170800475'),
                 'rol' => 'docente', 'telefono' => '966317550', 'programa_id' => '25'
             ],
             //CIENCIAS FÍSICO MATEMÁTICAS-Física
             [
                 'name' => 'MANUEL ANTONIO , MASIAS  CORREA',
-                 'email' => 'manuel.masias@unsch.edu.pe', 'password' => Hash::make('170800474'),
+                'email' => 'manuel.masias@unsch.edu.pe', 'password' => Hash::make('170800474'),
                 'rol' => 'docente', 'telefono' => '990506470', 'programa_id' => '26'
             ],
             //INGENIERÍA QUÍMICA
@@ -195,7 +195,7 @@ class UsersTableSeeder extends Seeder
             //INGENIERÍA EN INDUSTRIAS ALIMENTARIAS
             [
                 'name' => 'LUIS ALBERTO, HUAMANI   HUAMANI ',
-               'email' => 'alberto.huamani@unsch.edu.pe', 'password' => Hash::make('170800471'),
+                'email' => 'alberto.huamani@unsch.edu.pe', 'password' => Hash::make('170800471'),
                 'rol' => 'docente', 'telefono' => '989433409', 'programa_id' => '28'
             ],
             //INGENIERÍA AGROINDUSTRIAL
@@ -203,7 +203,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'JORGE ADALBERTO , MÁLAGA  JUAREZ',
                 'email' => 'jorge.malaga@unsch.edu.pe', 'password' => Hash::make('170800469'),
                 'rol' => 'docente', 'telefono' => '966649536', 'programa_id' => '29'
-            ], 
+            ],
             //FARMACIA Y BIOQUÍMICA
             [
                 'name' => 'MARItelefonoA , LOPEZ   SIERRALTA',
@@ -229,6 +229,7 @@ class UsersTableSeeder extends Seeder
             ],
             //Admin
             [
+<<<<<<< HEAD
                 'name' => 'Abl',
                 'email' => 'vilcabl10@gmail.com', 'password' => Hash::make('12345678/*'),
                 'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
@@ -241,6 +242,20 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'LUISA, ALCARRAZ  CURI',
                 'email' => 'luisa.alcarraz@unsch.edu.pe', 'password' => Hash::make('966052156'),
+=======
+                'name' => 'abl',
+                'email' => 'vilcabl10@gmail.com', 'password' => Hash::make('ultravd123/*'),
+                'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
+            ],
+            [
+                'name' => 'Teddy tafurg Guerra',
+                'email' => 'ttafurg@gmail.com', 'password' => Hash::make('999099214'),
+                'rol' => 'Admin', 'telefono' => '999099214', 'programa_id' => '1'
+            ],
+            [
+                'name' => 'Dra Luisa Alcarraz Curi',
+                'email' => 'luisa_alcarraz@hotmail.com', 'password' => Hash::make('966052156'),
+>>>>>>> 9b174216991681f6bb0e3805d4ceb70fee5d88fb
                 'rol' => 'Admin', 'telefono' => '966052156', 'programa_id' => '1'
             ],
 

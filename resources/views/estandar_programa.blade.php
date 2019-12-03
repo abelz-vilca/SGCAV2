@@ -3,12 +3,12 @@
 @section('name')
 
 
- 
+
 <div class="container-fluid" class="container-my-4">
-        
-        <div class="card-header">
-                CALIFICACÓN DE LOS ESTÁNDARES
-              </div>
+
+    <div class="card-header">
+        CALIFICACÓN DE LOS ESTÁNDARES
+    </div>
     <table class="table table-striped table-bordered" id="estandar_detalle" align="center">
         <thead class="table table-striped">
             <tr align="center" class="bg-info">
