@@ -3,10 +3,13 @@
 <div align="center" class="container-my-2">
 </div>
 <div class="container-fluid">
+        <div class="col-12">
+        <div class="card">
+        <div class="card-body">
     <div class="card-header">
         Verificación de archivos
     </div>
-
+    <div class="table-responsive m-t-10">
     <table class="display nowrap table table-hover table-striped table-bordered" id="reporte">
         <thead>
             <tr class="bg-danger">
@@ -14,47 +17,47 @@
                 <th scope="col">PROGRAMAS</th>
                 <th scope="col">CUI</th>
                 <th class="col">Acciones</th>
-                <th class="col"></th>
-                <th class="col"></th>
-                <th class="col"></th>
-                <th class="col"></th>
+                
             </tr>
         </thead>
         <tbody>
             @foreach ($programas as $item )
             <tr class="d-flex">
                 <th scope="row">{{$item->id}}</th>
-                <td class="col">{{$item->nombre_programa}}</td>
+                <td >{{$item->nombre_programa}}</td>
                 <td>{{$item->CUI}}</td>
 
                 <td>
                     <a href="{{route('listardetalles', $item)}}" type="button" class="btn btn-danger">Ver
                         Doc</a>
-                    {{-- <a href="{{route('programas', $item)}}" ype="button" class="btn
-                    btn-primary">DUCUMENTAR</a>
-                    --}}
-                    {{-- <a href="{{route('sumacalificacion', $item)}}" type="button" class="btn
-                    btn-warning">VER
-                    CALIFICACION</a> --}}
+                        <a href="{{route('sumacalificacion', $item)}}" type="button" class="btn btn-info">Estandar
+                                total</a>
 
+                                <a href="{{route('graficofactor',$item)}}" type="button" class="btn btn-secondary">
+                                        Factor total
+                                    </a>
 
-
-
+                                    <a href="{{route('graficodimension',$item)}}" type="button" class="btn btn-warning">Dimensión Total
+                                        </a>
+                                        <a href="{{route('graficocaed',$item)}}" type="button" class="btn btn-secondary">E</a>
                 </td>
-                <td> <a href="{{route('sumacalificacion', $item)}}" type="button" class="btn btn-info">Estandar
+                {{-- <td> <a href="{{route('sumacalificacion', $item)}}" type="button" class="btn btn-info">Estandar
                         total</a></td>
                 <td> <a href="{{route('graficofactor',$item)}}" type="button" class="btn btn-secondary">
                         Factor total
                     </a></td>
                 <td> <a href="{{route('graficodimension',$item)}}" type="button" class="btn btn-warning">Dimensión Total
                     </a></td>
-                <td> <a href="{{route('graficocaed',$item)}}" type="button" class="btn btn-secondary">E</a></td>
+                <td> <a href="{{route('graficocaed',$item)}}" type="button" class="btn btn-secondary">E</a></td> --}}
 
             </tr>
             @endforeach()
         </tbody>
     </table>
-
+</div>
+</div>
+</div>
+</div>
 </div>
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
 

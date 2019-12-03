@@ -1,13 +1,11 @@
 @extends('layouts.plantilla')
 @section('name')
 
-
+<div ><i class="fas fa-align-center    "></i>
 <?php
 
 echo"<br/><br/>";
 echo"Factores del Porgrama de Estudios</br>";
-
-
 
 $programas;
 $factor1;
@@ -21,12 +19,13 @@ $factor8;
 $factor9;
 $factor10;
 
-
 ?>
 
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
 <script type="text/javascript">
+
   google.load("visualization", "1.1", {packages:["bar"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
@@ -50,7 +49,10 @@ $factor10;
 
 <div>
   <h4>Programa de estudios</h4>
-  <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->nombre_programa}}">
+  <p><input disabled="disabled" class="form-control" type="text"  value="{{$programas->nombre_programa}}">
     </p>
 </div>
+</div>
+
+
 @endsection

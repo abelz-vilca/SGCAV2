@@ -9,15 +9,7 @@
                     CALIFICACÓN DE LOS CRITERIOS
                   </div>
         <div class="card">
-            
-               
-            {{-- <div align="center">
-                <a align="center" type="button" class="btn btn-dark btn-block"
-                    href="{{route('criterio_programaid',$devolverisprograma->programa_id)}}">
-            <img src="{{asset('imagenes/regresar.png')}}" width="20" height="20">
-            SUBIR ANEXOS DEL CRITERIO
-            </a>
-        </div> --}}
+                 
         <div class="card-body" style="background-color: #f6f6f6">
             @if (session('mensaje') )
             <div class="alert alert-success">{{ session('mensaje') }}
@@ -36,14 +28,7 @@
                         </button>
                     </div>
                     @enderror
-                    {{-- @if ($errors->has('archivo'))
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        No ha seleccionado ningun Archivo
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    @endif --}}
+               
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -104,12 +89,8 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="justificacion">JUSTIFICACION</label>
-                                <textarea id="justificacion" rows="9"
-                                columns="5" name="justificacion"
-                                    placeholder="justificación del Cumplimiento" 
-                                    value="{{ old('justificacion') }}"></textarea>
+ <textarea id="justificacion" rows="9" columns="5" name="justificacion" value="<?php echo($devolverisprograma->justificacion); ?>"></textarea>
                             </div>
-
                         </div>
                         <div class="col-md-4" style="background-color: #c3c3c3">
                             <div class="form-group">
@@ -139,5 +120,4 @@
     </div>
 </div>
 </div>
-
 @endsection

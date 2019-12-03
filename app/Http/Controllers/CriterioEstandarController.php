@@ -95,7 +95,7 @@ class CriterioEstandarController extends Controller
     public function updates(Request $request, $id)
     {
         $request->validate([
-            'archivo' => 'required',
+          
             'calificacion' => 'required',
             'justificacion' => 'required',
 

@@ -229,7 +229,7 @@ class UsersTableSeeder extends Seeder
             ],
             //Admin
             [
-<<<<<<< HEAD
+
                 'name' => 'Abl',
                 'email' => 'vilcabl10@gmail.com', 'password' => Hash::make('12345678/*'),
                 'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
@@ -239,28 +239,15 @@ class UsersTableSeeder extends Seeder
                 'email' => 'ttafurg@gmail.com', 'password' => Hash::make('999099214'),
                 'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
             ],
-            [
-                'name' => 'LUISA, ALCARRAZ  CURI',
-                'email' => 'luisa.alcarraz@unsch.edu.pe', 'password' => Hash::make('966052156'),
-=======
-                'name' => 'abl',
-                'email' => 'vilcabl10@gmail.com', 'password' => Hash::make('ultravd123/*'),
-                'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
-            ],
-            [
-                'name' => 'Teddy tafurg Guerra',
-                'email' => 'ttafurg@gmail.com', 'password' => Hash::make('999099214'),
-                'rol' => 'Admin', 'telefono' => '999099214', 'programa_id' => '1'
-            ],
-            [
+           
+                       [
                 'name' => 'Dra Luisa Alcarraz Curi',
-                'email' => 'luisa_alcarraz@hotmail.com', 'password' => Hash::make('966052156'),
->>>>>>> 9b174216991681f6bb0e3805d4ceb70fee5d88fb
+                'email' => 'luisa.alcarraz@unsch.edu.pe', 'password' => Hash::make('966052156'),
                 'rol' => 'Admin', 'telefono' => '966052156', 'programa_id' => '1'
             ],
             [
                 'name' => 'Norma Gutierrez Valencia',
-                'email' => 'luisa_alcarraz@hotmail.com', 'password' => Hash::make('992286094'),
+                'email' => 'normagutierrez.30@hotmail.com', 'password' => Hash::make('992286094'),
                 'rol' => 'Admin', 'telefono' => '992286094', 'programa_id' => '1'
             ],
 

@@ -13,8 +13,6 @@ $dimension3;
 $dimension4;
 
 ?>
-
-
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
     google.load("visualization", "1.1", {packages:["bar"]});
