@@ -239,8 +239,8 @@ class UsersTableSeeder extends Seeder
                 'email' => 'ttafurg@gmail.com', 'password' => Hash::make('999099214'),
                 'rol' => 'Admin', 'telefono' => '910268900', 'programa_id' => '1'
             ],
-           
-                       [
+
+            [
                 'name' => 'Dra Luisa Alcarraz Curi',
                 'email' => 'luisa.alcarraz@unsch.edu.pe', 'password' => Hash::make('966052156'),
                 'rol' => 'Admin', 'telefono' => '966052156', 'programa_id' => '1'
@@ -248,6 +248,12 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'Norma Gutierrez Valencia',
                 'email' => 'normagutierrez.30@hotmail.com', 'password' => Hash::make('992286094'),
+                'rol' => 'Admin', 'telefono' => '992286094', 'programa_id' => '1'
+            ],
+
+            [
+                'name' => 'invitado',
+                'email' => 'invitado@hotmail.com', 'password' => Hash::make('12345678'),
                 'rol' => 'Admin', 'telefono' => '992286094', 'programa_id' => '1'
             ],
 
