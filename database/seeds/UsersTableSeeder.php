@@ -258,6 +258,11 @@ class UsersTableSeeder extends Seeder
 >>>>>>> 9b174216991681f6bb0e3805d4ceb70fee5d88fb
                 'rol' => 'Admin', 'telefono' => '966052156', 'programa_id' => '1'
             ],
+            [
+                'name' => 'Norma Gutierrez Valencia',
+                'email' => 'luisa_alcarraz@hotmail.com', 'password' => Hash::make('992286094'),
+                'rol' => 'Admin', 'telefono' => '992286094', 'programa_id' => '1'
+            ],
 
         ]);
     }
