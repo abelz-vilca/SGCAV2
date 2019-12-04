@@ -1,57 +1,39 @@
 @extends('layouts.plantilla')
 
 @section('name')
-
-
-<link rel="stylesheet" href="{{asset('tablas/css/dataTables.bootstrap4.min.css')}}">
-
-
-
+<div align="center">
+<a href="http://www.unitag.io/qreator/generate?setting=%7B%22EYES%22%3A%7B%22EYE_TYPE%22%3A%22Simple%22%7D%2C%22E%22%3A%22H%22%2C%22BODY_TYPE%22%3A0%2C%22LAYOUT%22%3A%7B%22COLORBG%22%3A%22ffffff%22%2C%22COLOR1%22%3A%22800040%22%7D%2C%22LOGO%22%3A%7B%22L_NAME%22%3A%22https%3A%2F%2Fstatic-unitag.com%2Ffile%2Ffreeqr%2F260ceb9bfd744f7a189d60d32fb404ea.png%22%2C%22EXCAVATE%22%3Atrue%7D%7D&data=%7B%22TYPE%22%3A%22url%22%2C%22DATA%22%3A%7B%22URL%22%3A%22AGUIRRE+ANDRADE%2C+MANGLIO%22%7D%7D ">
+<img src="http://www.unitag.io/qreator/generate?setting=%7B%22EYES%22%3A%7B%22EYE_TYPE%22%3A%22Simple%22%7D%2C%22E%22%3A%22H%22%2C%22BODY_TYPE%22%3A0%2C%22LAYOUT%22%3A%7B%22COLORBG%22%3A%22ffffff%22%2C%22COLOR1%22%3A%22800040%22%7D%2C%22LOGO%22%3A%7B%22L_NAME%22%3A%22https%3A%2F%2Fstatic-unitag.com%2Ffile%2Ffreeqr%2F260ceb9bfd744f7a189d60d32fb404ea.png%22%2C%22EXCAVATE%22%3Atrue%7D%7D&data=%7B%22TYPE%22%3A%22url%22%2C%22DATA%22%3A%7B%22URL%22%3A%22AGUIRRE+ANDRADE%2C+MANGLIO%22%7D%7D" alt="QR Code - AGUIRRE ANDRADE, MANGLIO"></a>
+</div>
 <div class="card">
-        <div class="card-header">
-                PROGRAMA(S) DE ESTUDIO(S)
+        <div class="card-header" style="background-color: red;">
+                Certificados
               </div>
         <div class="card">
-            <div class="card-body" style="background-color: #BDD7D6;">
+            <div class="card-body" style="background-color: light;">
                 <div class="table-responsive m-t-10">
-                <table class="display nowrap table table-hover table-striped table-bordered" id="editable-datatable" style="width:100%">
+                <table class="display nowrap table table-hover table-striped table-bordered" id="certificado" style="width:100%">
                     <thead>
-                        <tr align="center" class="bg-success">
+                        <tr align="center" class="bg-info">
                             <th >N°</th>
-                            <th >PROGRAMAS DE ESTUDIOS</th>
-                            <th >CUI</th>
+                            <th >Usuario</th>
+                            <th >Codigo de certificado</th>
 
-                            <th scope="col">Acciones</th>
+                            <th scope="col">Fecha</th>
+                            <th>ver QR</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        @foreach ($programas as $item )
+                        @foreach ($certificado as $item )
                         <tr class="table-info">
                             <th >{{$item->id}}</th>
-                            <td width="10px"> {{$item->nombre_programa}}</td>
-                            <td >{{$item->CUI}}</td>
-
-                            <td>
-                                {{-- para calificar estandar--}}
-                                
-                                <a href="{{route('criterio_programaid', $item)}}" >
-                                    <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-primary">CRITERIOS</button>
-                                 </a> <a href="{{route('estandar_programaid', $item)}}">
-                                    <button  type="button" class="btn waves-effect waves-light btn-rounded btn-outline-warning">
-                                        ESTANDAR
-                                    </button> 
-                                   
-                                </a>
-
-                                {{-- <a href="{{route('criterio_programaid', $item)}}" type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info">
-                                    <ion-icon name="clipboard"></ion-icon>
-                                  CRITERIOS
-                                </a> --}}
-                                
-                                
-
-                            </td>
+                            <td > {{$item->nombres}}</td>
+                            <td >{{$item->idcertificado}}</td>
+<td>04/12/2019</td>
+<td><a href="">
+    <button  type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info">VER QR</button></a></td>
+                            
                         </tr>
                         @endforeach()
 
@@ -71,9 +53,9 @@
 <script src="{{asset('assets/plugins/tiny-editable/mindmup-editabletable.js')}}"></script>
 <script src="{{asset('assets/plugins/tiny-editable/numeric-input-example.js')}}"></script>
 <script>
-    $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
+    $('#certificado').editableTableWidget().numericInputExample().find('td:first').focus();
                 $(document).ready(function() {
-                    $('#editable-datatable').DataTable({
+                    $('#certificado').DataTable({
             "language": lenguaje_espanol
    
             // table.rows('.important').deselect();                  

@@ -18,6 +18,8 @@
 //mostrar login
 Route::get('/', 'PagesController@primero')->name('primero');
 
+//certificados
+Route::get('/certificados', 'UsuarioController@certificados')->name('certificados');
 
 //pantalla principal
 Route::get('/inicio', 'PagesController@iniciar')->name('inicio');

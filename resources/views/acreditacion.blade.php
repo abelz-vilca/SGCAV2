@@ -5,10 +5,10 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color: orange;">
                 DATOS GENERALES
             </div>
-            <div class="card-body" style="background-color: #BDD7D6;">
+            <div class="card-body" style="background-color: #white;">
                 <form>
                     <div class="row">
                         <div class="col-sm-6">

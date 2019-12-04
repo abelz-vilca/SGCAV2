@@ -27,7 +27,7 @@
         ]);
 
         var options = {
-          title: 'GRÁFICA GLOBAL DE LA UNHEVAL'
+          title: 'GRÁFICA GLOBAL DE LA U'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));

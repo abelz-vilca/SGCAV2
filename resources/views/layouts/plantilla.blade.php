@@ -185,23 +185,30 @@
                         <!-- <li class="nav-small-cap">PERSONAL</li> -->
 
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
-                                    class="icon icon-grid"></i><span class="hide-menu">menu</span></a>
+                                    class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">menu</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{route('acreditacion')}}">Acreditación</a></li>
-                                <li><a href="{{asset('errors')}}">Licenciamiento</a></li>
-                                <li><a href="{{asset('errors')}}">SGC</a></li>
+                                <li><a href="{{route('acreditacion')}}">   Acreditación</a></li>
+                                <li><a href="{{asset('errors')}}">   Licenciamiento</a></li>
+                                <li><a href="{{asset('errors')}}">   SGC</a></li>
                                 <!-- submenu-->
                                 <li> <a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
-                                        <i class=" icon-chart"></i><span class="hide-menu"> REPORTES</span></a>
+                                        <i class=" icon-chart"></i><span class="hide-menu">  REPORTES</span></a>
                                     <ul aria-expanded="false" class="collapse">
-                                        <li><a class="icon-crop" href="{{route('reporte')}}">PROGRAMAS</a></li>
-                                        <li><a class="icon-crop" href="">Dimencion</a></li>
+                                        <li><a class="icon-crop" href="{{route('reporte')}}">   PROGRAMAS</a></li>
+                                        <li><a class="fa fa-cubes" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
-                                        <li><a class="icon-graph" href="{{route('estandartotal')}}"> Estandares</a>
+                                        <li><a class="fa fa-bar-chart-o" href="{{route('estandartotal')}}">  Estandares</a>
                                         </li>
                                     </ul>
+                                    
                                 </li>
-
+<li><a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
+    <i class="fa fa-folder"></i><span class="hide-menu">   Documentos</span></a>
+    <ul aria-expanded="false" class="collapse">
+       <li><a class=" fa fa-address-card" href="{{route('certificados')}}">  Certificados</a></li>
+        <li><a class="fa fa-file" href="{{route('certificados')}}">    Constancias</a></li>
+    </ul>
+</li>
                             </ul>
                         </li>
                     </ul>
