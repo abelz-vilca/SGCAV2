@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+
 use App;
 use App\Dimension;
-use App\Docente;
+
 use App\EstandarPrograma;
 use app\User;
 

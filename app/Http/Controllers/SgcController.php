@@ -5,26 +5,27 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use carbon\Carbon;
-use App\Estandar;
-use App\Criterio;
-use App\CriterioEstandar;
-use App;
-
-class CriterioEstandarController extends Controller
+class SgcController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function inicio()
 
-
+    {
+        if (auth()->user()->rol == 'Admin') {
+            return view('SGCA.principal');
+        } else {
+            return view('error');
+        }
+        // return view('SGCA.principal');
+    }
     public function index()
     {
         //
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -35,13 +36,6 @@ class CriterioEstandarController extends Controller
     {
         //
     }
-    public function devolverprograma($programa_id)
-    {
-
-        $devolverprograma = App\CriterioEstandar::where('programa_id', $programa_id)->get();
-
-        return view('CRITERIOS.criterio_estandar_editar', compact('devolverprograma'));
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -49,6 +43,10 @@ class CriterioEstandarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function store(Request $request)
+    {
+        //
+    }
 
     /**
      * Display the specified resource.
@@ -72,14 +70,6 @@ class CriterioEstandarController extends Controller
         //
     }
 
-
-    public function editar($id)
-    {
-        $devolverisprograma = App\CriterioEstandar::findOrFail($id);
-
-        return view('CRITERIOS.calificarcriterio', compact('devolverisprograma'));
-    }
-
     /**
      * Update the specified resource in storage.
      *
@@ -88,32 +78,6 @@ class CriterioEstandarController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-
-        //
-    }
-    public function updates(Request $request, $id)
-    {
-        $request->validate([
-
-            'calificacion' => 'required',
-            'justificacion' => 'required',
-
-        ]);
-        $criterioupdate = App\CriterioEstandar::findOrFail($id);
-
-        if ($request->hasFile('archivo')) {
-            $criterioupdate->archivo = $request->file('archivo')->store('public/Criterios');
-        }
-        $criterioupdate->calificacion = $request->calificacion;
-        $criterioupdate->justificacion = $request->justificacion;
-        // $criterioupdate->descripcion = $request->descripcion;
-        $criterioupdate->fecha = Carbon::now();
-
-        $criterioupdate->save();
-        return back()->with('mensaje', 'Calificacion actualizada');
-    }
-    public function store(Request $request)
     {
         //
     }

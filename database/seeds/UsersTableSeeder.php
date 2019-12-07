@@ -2,6 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
+use illuminate\Support\Facades\hash;
+use illuminate\Support\Facades\DB;
+
+
 class UsersTableSeeder extends Seeder
 {
     /**

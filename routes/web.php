@@ -10,11 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//comando de ayuda para proteger rutas poner en cada controlador XD
-// public function __construct()
-//     {
-//         $this->middleware('auth');
-//     }
+//rutas de sgc
+Route::get('/sgc', 'SgcController@inicio')->name('sgc');
+
 //mostrar login
 Route::get('/', 'PagesController@primero')->name('primero');
 

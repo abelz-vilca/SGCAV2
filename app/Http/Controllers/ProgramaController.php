@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+
 use carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Programa;
-use App\EstandarPragrama;
+
 use App;
 
 class ProgramaController extends Controller
@@ -39,15 +39,15 @@ class ProgramaController extends Controller
     {
 
         // $programas = App\Programa::all();
-        
-       if (auth()->user()->rol=='docente'){
-        $programas = App\Programa::where('id',auth()->user()->programa_id)->get();
-       }else{
-        $programas = App\Programa::all();
+
+        if (auth()->user()->rol == 'docente') {
+            $programas = App\Programa::where('id', auth()->user()->programa_id)->get();
+        } else {
+            $programas = App\Programa::all();
         }
-                                                                  
+
         // $programas = App\Programa::where('id',auth()->user()->programa_id)->get();
-       
+
         return view('programas', compact('programas'));
     }
     public function creates()

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use DB;
+
 use carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Estandar;

@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App;
-use DB;
+
 use App\Dimension;
-use App\Docente;
+
 use App\EstandarPrograma;
 use App\CriterioEstandar;
 use app\User;
@@ -21,10 +21,11 @@ class UsuarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function certificados(){
+    public function certificados()
+    {
         $certificado = App\Certificaado::all();
-         return view('CERTIFICADOS.certificados',compact('certificado'));
-     }
+        return view('CERTIFICADOS.certificados', compact('certificado'));
+    }
     public function index()
     {
         //
