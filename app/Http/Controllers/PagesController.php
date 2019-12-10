@@ -30,7 +30,7 @@ class PagesController extends Controller
 
         // $roless = App\CriterioEstandar::findOrFail(auth()->user()->programa_id);
 
-        return view('layouts.plantilla', compact('rol', 'roles', 'roless'));
+        return view('layouts.plantilla', compact('rol'));
     }
 
     public function datos()
