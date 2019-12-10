@@ -61,7 +61,7 @@
                     {{-- <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
                     class="btn btn-info">Verificar Documento</a> --}}
                 </td>
-                <td disabled>
+                <td disabled="disabled">
                     {{-- 
                                 <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
                     class="btn btn-warning"><img src="{{asset('imagenes/check.png')}}" width="20" height="20">por

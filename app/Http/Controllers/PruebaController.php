@@ -52,7 +52,7 @@ class PruebaController extends Controller
     public function grafic()
     {
 
-        return view('PRUEBAS.graficos');
+        return view('PRUEBAS.grafico2');
     }
     public function grafic2()
     {

@@ -53,7 +53,7 @@
                                     coords="736, 121, 871, 192" target="_blank">
                                 <area href="plancomunicacion.html" shape="rect" coords="585, 123, 717, 191">
                             </map>
-                            <img border="0" src="{{asset('imagenes/index22.jpg')}}" width="1064" height="882"
+                            <img border="0" src="{{asset('imagenes/index01.jpg')}}" width="1064" height="882"
                                 usemap="#FPMap1">
 
                         </div>

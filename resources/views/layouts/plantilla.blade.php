@@ -198,7 +198,10 @@
                                         <li><a class="fa fa-cubes" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
                                         <li><a class="fa fa-bar-chart-o" href="{{route('estandartotal')}}">
-                                                Estandares</a>
+                                                Estandaresv1</a>
+                                        </li>
+                                        <li><a class="fa fa-bar-chart-o" href="{{route('grafic')}}">
+                                                Estandaresv2</a>
                                         </li>
                                     </ul>
 

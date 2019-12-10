@@ -1,10 +1,6 @@
-@extends('layouts.plantilla')
-
-@section('name')
-
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
+    google.charts.load('current', {'packages':['corechart']});
 
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawStuff);
@@ -18,6 +14,26 @@
       /*google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawCarreras);*/
 
+
+
+      function drawAvance() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Descripcion', '% de Avance'],
+          ['Finalizado',87.919389978214],
+
+          ["Sin Avance",12.080610021786],
+
+        ]);
+
+        var options = {
+          title: 'GRÁFICA GLOBAL DE LA U'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
 
       function drawCarreras() {
         var data = new google.visualization.arrayToDataTable([
@@ -58,7 +74,7 @@
 
 
         var options = {
-        title: '% de Avance por Programas de estudio',
+        title: '% de Avance por Carreras Profesionales',
         isStacked: true,
         height:600,
         chartArea: {
@@ -66,7 +82,7 @@
           top:100,
         },
         hAxis: {
-          title: 'Programas de Estudio',
+          title: 'Carreras Profesionales',
           titleTextStyle: {
             color: '#FF0000',            
           },
@@ -246,19 +262,19 @@
 
 </script>
 <div class="row">
-  <div class="col s12 m12 112">
+    <div class="col s12 m12 112">
 
-    <div class="card-panel">
-      {{-- <h3 class="header2">AVANCE GLOBAL</h3>
-      <div class="row"> --}}
+        <div class="card-panel">
+            <h3 class="header2">AVANCE GLOBAL</h3>
+            <div class="row">
 
-      <div id="piechart" style="width: 100%; height: 500px;"></div>
+                <div id="piechart" style="width: 100%; height: 500px;"></div>
 
-      <h4 class="header2">Avance de los programas de estudios</h4>
+                <h4 class="header2">RANKING</h4>
 
-      <div id="carreras" style="width: 100%; min-height: 400px;"></div>
+                <div id="carreras" style="width: 100%; min-height: 400px;"></div>
 
-      <!--<table class="ui celled striped table">
+                <!--<table class="ui celled striped table">
       <thead>
         <tr>
           <th>Número</th>
@@ -413,11 +429,8 @@
   </div>
   </div>
 </div>-->
-    </div>
-  </div>
-</div>
-</div>
-<div id="divDimension" style="width: 100%; min-height: 400px;"></div>
-<div id="divfactor" style="width: 100%; min-height: 400px;"></div>
-<div id="dual_y_div" style="width: 100%; min-height: 400px;"></div>
-@endsection
+
+            </div>
+            <div id="divDimension" style="width: 100%; min-height: 400px;"></div>
+            <div id="divfactor" style="width: 100%; min-height: 400px;"></div>
+            <div id="dual_y_div" style="width: 100%; min-height: 400px;"></div>
