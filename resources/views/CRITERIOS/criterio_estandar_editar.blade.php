@@ -66,8 +66,9 @@
                                 <a href="{{Storage::url($item->archivo)}}" target="_blank" type="button"
                     class="btn btn-warning"><img src="{{asset('imagenes/check.png')}}" width="20" height="20">por
                     verificar</a> --}}
-                    <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-success"
-                        data-toggle="button" aria-pressed="false">
+                    <button disabled="disabled" type="button"
+                        class="btn waves-effect waves-light btn-rounded btn-outline-success" data-toggle="button"
+                        aria-pressed="false">
                         <i class="ti-settings text" aria-hidden="true"></i>
                         <span class="text">por Verificar</span>
                         <i class="ti-check text-active" aria-hidden="true"></i>
