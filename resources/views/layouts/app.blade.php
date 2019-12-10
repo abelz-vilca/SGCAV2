@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>login</title>
 
-    <title>{{ config('app.name', 'Oficina General de Calidad y Acreditación OGCA - UNSCH') }}</title>
+    {{-- <title>{{ config('app.name', 'Oficina General de Calidad y Acreditación OGCA - UNSCH') }}</title> --}}
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
