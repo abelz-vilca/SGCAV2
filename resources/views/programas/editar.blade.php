@@ -33,14 +33,14 @@
                     @method('PUT')
                     @csrf
 
-                    @error('archivo')
+                    {{-- @error('archivo')
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                         No ha seleccionado ningun Archivo
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    @enderror
+                    @enderror --}}
 
                     <div class="row">
                         <div class="col-sm-6">
@@ -70,7 +70,7 @@
                                             <option value="">
                                                 Seleccione su Calificación</option>
                                             <option value="1">1</option>
-                                            </option>
+
                                             <option value="2">2</option>
                                             <option value="3">4</option>
                                             <option value="4">3</option>
