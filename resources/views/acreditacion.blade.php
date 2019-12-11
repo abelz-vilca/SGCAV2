@@ -62,8 +62,28 @@
             <a class="btn waves-effect waves-light btn-rounded btn-warning" href="actualizardatos">Actualizar Datos
                 Miembros</a>
 
-            <h3 class="text center-block"> Estimados Docentes debe actualizar los datos de los miembros de comités de
+            <h3 align="center" class="text center-block"> Estimados Docentes debe actualizar los datos de los miembros
+                de comités de
                 autoevaluación</h3>
+            <div id="contadorpaginahijo">
+                <span style="color:#800040">
+                    <marquee>
+                        <font size="4">CONTADOR DE VISITAS INICIADO EL 11-12-2019</font>
+                    </marquee>
+                </span>
+                {{-- <a href="http://www.contadorvisitasgratis.com" title="contador de visitas gratis"><img
+                        src="http://counter10.01counter.com/private/contadorvisitasgratis.php?c=c268fad432861d7860829e3f66d0ff85"
+                        border="0" title="contador de visitas gratis" alt="contador de visitas gratis"></a> --}}
+            </div>
+            <div>
+                <div id="sfcgnecf3bp9cd3wcdnt4n9a7hm5jdhrsxq"></div>
+                <script type="text/javascript"
+                    src="https://counter6.wheredoyoucomefrom.ovh/private/counter.js?c=gnecf3bp9cd3wcdnt4n9a7hm5jdhrsxq&down=async"
+                    async></script>
+                <noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas html"><img
+                            src="https://counter6.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=gnecf3bp9cd3wcdnt4n9a7hm5jdhrsxq"
+                            border="0" title="contador de visitas html" alt="contador de visitas html"></a></noscript>
+            </div>
         </div>
 
     </div>

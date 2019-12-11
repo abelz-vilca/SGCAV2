@@ -47,12 +47,14 @@ class PruebaController extends Controller
     {
         $pruebas = App\Prueba::all();
 
+
         return view('PRUEBAS.formulario', compact('pruebas'));
     }
     public function grafic()
     {
 
-        return view('PRUEBAS.grafico2');
+        $programa01 = App\EstandarPrograma::where('programa_id', 1)->get()->sum('calificacion');
+        return view('PRUEBAS.grafico2', compact('programa01'));
     }
     public function grafic2()
     {

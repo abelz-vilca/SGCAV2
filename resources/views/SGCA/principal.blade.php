@@ -12,6 +12,9 @@
                 <tr>
                     <td align="center">
                         <div>
+                            <marquee>
+                                <font size="4">Sistema de Gestion de Calidad</font>
+                            </marquee>
                             "&nbsp;"
                             <map name="FPMap1">
                                 <area href="SIGCUNSCH_MANUALCALIDAD.pdf" shape="rect" coords="29, 127, 163, 197"
