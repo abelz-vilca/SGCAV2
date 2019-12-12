@@ -7,7 +7,7 @@
 <div class="container-fluid" class="container-my-4">
 
     <div class="card-header">
-        CALIFICACÓN DE LOS ESTÁNDARES
+        CALIFICACIÓN DE LOS ESTÁNDARES
     </div>
     <table class="table table-striped table-bordered" id="estandar_detalle" align="center">
         <thead class="table table-striped">
@@ -45,8 +45,9 @@
                 <td class="" align="center">
 
                     <a href="{{route('programas.editar', $iteme)}}">
-                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-success " > Calificar</button>
-                          </a>
+                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-success ">
+                            Calificar</button>
+                    </a>
 
                     {{-- <a href="" type="button" class="btn btn-info">Criterios</a> --}}
                 </td>

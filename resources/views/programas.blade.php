@@ -8,18 +8,19 @@
 
 
 <div class="card">
-        <div class="card-header">
-                PROGRAMA(S) DE ESTUDIO(S)
-              </div>
-        <div class="card">
-            <div class="card-body" style="background-color: #BDD7D6;">
-                <div class="table-responsive m-t-10">
-                <table class="display nowrap table table-hover table-striped table-bordered" id="editable-datatable" style="width:100%">
+    <div class="card-header">
+        PROGRAMA(S) DE ESTUDIO(S)
+    </div>
+    <div class="card">
+        <div class="card-body" style="background-color: #BDD7D6;">
+            <div class="table-responsive m-t-10">
+                <table class="display nowrap table table-hover table-striped table-bordered" id="editable-datatable"
+                    style="width:100%">
                     <thead>
                         <tr align="center" class="bg-success">
-                            <th >N°</th>
-                            <th >PROGRAMAS DE ESTUDIOS</th>
-                            <th >CUI</th>
+                            <th>N°</th>
+                            <th>PROGRAMAS DE ESTUDIOS</th>
+                            <th>CUI</th>
 
                             <th scope="col">Acciones</th>
                         </tr>
@@ -28,28 +29,34 @@
 
                         @foreach ($programas as $item )
                         <tr class="table-info">
-                            <th >{{$item->id}}</th>
+                            <th>{{$item->id}}</th>
                             <td width="10px"> {{$item->nombre_programa}}</td>
-                            <td >{{$item->CUI}}</td>
+                            <td>{{$item->CUI}}</td>
 
                             <td>
                                 {{-- para calificar estandar--}}
-                                
-                                <a href="{{route('criterio_programaid', $item)}}" >
-                                    <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-primary">CRITERIOS</button>
-                                 </a> <a href="{{route('estandar_programaid', $item)}}">
-                                    <button  type="button" class="btn waves-effect waves-light btn-rounded btn-outline-warning">
+
+                                <a href="{{route('criterio_programaid', $item)}}">
+                                    <button type="button"
+                                        class="btn waves-effect waves-light btn-rounded btn-outline-primary">CRITERIOS</button>
+                                </a> <a href="{{route('estandar_programaid', $item)}}">
+                                    <button type="button"
+                                        class="btn waves-effect waves-light btn-rounded btn-outline-warning">
                                         ESTANDAR
-                                    </button> 
-                                   
+                                    </button>
+                                </a>
+                                <a href="{{route('docs_programaid', $item)}}">
+                                    <button type="button"
+                                        class="btn waves-effect waves-light btn-rounded btn-outline-success">Doc</button>
                                 </a>
 
-                                {{-- <a href="{{route('criterio_programaid', $item)}}" type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info">
-                                    <ion-icon name="clipboard"></ion-icon>
-                                  CRITERIOS
+                                {{-- <a href="{{route('criterio_programaid', $item)}}" type="button" class="btn
+                                waves-effect waves-light btn-rounded btn-outline-info">
+                                <ion-icon name="clipboard"></ion-icon>
+                                CRITERIOS
                                 </a> --}}
-                                
-                                
+
+
 
                             </td>
                         </tr>
@@ -59,7 +66,8 @@
 
                 </table>
             </div>
-        </div></div>
+        </div>
+    </div>
 </div>
 
 

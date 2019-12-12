@@ -194,6 +194,7 @@
                                 <li> <a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
                                         <i class=" icon-chart"></i><span class="hide-menu"> REPORTES</span></a>
                                     <ul aria-expanded="false" class="collapse">
+                                        <li><a class="icon-file" href="{{route('informes')}}">Reportes</a></li>
                                         <li><a class="icon-crop" href="{{route('reporte')}}"> PROGRAMAS</a></li>
                                         <li><a class="fa fa-cubes" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
