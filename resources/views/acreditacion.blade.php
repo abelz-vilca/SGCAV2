@@ -68,7 +68,7 @@
             <div id="contadorpaginahijo">
                 <span style="color:#800040">
                     <marquee>
-                        <font size="4">CONTADOR DE VISITAS INICIADO EL 11-12-2019</font>
+                        <font size="4">CONTADOR DE VISITAS INICIADO EL 12-12-2019</font>
                     </marquee>
                 </span>
                 {{-- <a href="http://www.contadorvisitasgratis.com" title="contador de visitas gratis"><img
