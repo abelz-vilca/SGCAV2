@@ -12,7 +12,7 @@
     <table class="table table-striped table-bordered" id="estandar_detalle" align="center">
         <thead class="table table-striped">
             <tr align="center" class="bg-info">
-                <th scope="col">#ID</th>
+                <th scope="col">N°</th>
                 <th scope="col">Documento</th>
                 <th scope="col">Calificacion</th>
                 <th scope="col">Descripcion</th>

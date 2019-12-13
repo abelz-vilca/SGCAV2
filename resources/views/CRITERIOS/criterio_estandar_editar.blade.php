@@ -41,7 +41,7 @@
                                       if ($item->calificacion==1){
                                         echo "SI";
                                     }else{
-                                        echo "NO";
+                                        echo "";
                                     }
                                                                   ?>
                 </td>

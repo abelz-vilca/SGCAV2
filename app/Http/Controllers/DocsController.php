@@ -58,6 +58,7 @@ class DocsController extends Controller
             $docsoupdate->reportes = $request->file('reportes')->store('public/Reportes');
         }
         $docsoupdate->Descripcion = $request->Descripcion;
+        $docsoupdate->fecha =  Carbon::now();
         $docsoupdate->programa_id = $request->programa_id;
        
         // $docsoupdate->fecha = Carbon::now();

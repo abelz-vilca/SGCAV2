@@ -21,8 +21,8 @@ class Estandar_programaTableSeeder extends Seeder
 
         );
 
-        $arraye = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+        // $arraye = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        $arraye = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         for ($i = 1; $i <= 34; $i++) {
             DB::table('estandar_programa')->insert([
                 'calificacion' => $random = Arr::random($arraye),

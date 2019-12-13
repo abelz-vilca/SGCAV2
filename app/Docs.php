@@ -11,7 +11,8 @@ class Docs extends Model
         
         'reportes',
         'Descripcion',
-        'programa_id'
+        'programa_id',
+        'fecha'
 
     ];
 }

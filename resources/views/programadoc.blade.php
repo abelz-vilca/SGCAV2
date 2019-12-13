@@ -64,16 +64,36 @@
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <label for="fecha">DESCRIPCION</label>
-                                        <input textarea class="form-control" name="Descripcion"
-                                            placeholder="Indique el Num del reporte"></textarea>
+                                        <label for="Descripcion">Reporte</label>
+                                        <div class="controls">
+                                            <select name="Descripcion" id="Descripcion" required class="form-control">
+                                                <option value="">
+                                                    --Seleccione su Reporte--</option>
+                                                <option value="PRIMER REPORTE">Primer Reporte</option>
+
+                                                <option value="SEGUNDO REPORTE">Segundo Reporte</option>
+                                                <option value="TERCER REPORTE">Tercer Reporte</option>
+
+                                                <option value="CUARTO REPORTE">Cuarto Reporte</option>
+                                                <option value="QUINTO REPORTEs">Quinto Reporte</option>
+
+                                                <option disabled="true" value="">Sexto Reporte</option>
+
+                                            </select>
+
+                                        </div>
                                     </div>
+                                    {{-- <div class="form-group">
+                                        <label for="fecha">Seleccione Reporte</label>
+                                        <input textarea class="form-control" name="Descripcion"
+                                            placeholder="Quinto Reporte"></textarea>
+                                    </div> --}}
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="fecha">ID</label>
-                                        <input disabled="true" type="text" class="form-control" name="programa_id"
-                                            id="<?php echo($id->id); ?>">
+                                        <input type="text" class="form-control" name="programa_id"
+                                            value="<?php echo($id->id); ?>">
                                     </div>
                                 </div>
                             </div>
@@ -89,14 +109,15 @@
     <div class="card-header">
         Reportes
     </div>
-    <table class="table table-striped table-bordered" id="estandar_detalle" align="center">
+    <table class="display nowrap table table-hover table-striped table-bordered" id="estandar_detalle">
         <thead class="table table-striped">
-            <tr align="center" class="bg-info">
+            <tr class="bg-info">
                 <th scope="col">N°</th>
                 <th scope="col">Documento</th>
                 <th scope="col">Num de Reporte</th>
-                <th scope="col">programaID</th>
-                <th align="center" scope="col">Acciones</th>
+                <th scope="col">Fecha de Cambio</th>
+                {{-- <th scope="col">programaID</th> --}}
+                <th scope="col">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -104,10 +125,13 @@
             @foreach ($docs as $item)
             <tr disabled="disabled" class="table-light">
                 <th scope="row">{{$item->id}}</th>
-                <td><a href="{{Storage::url($item->reportes)}}" target="_blank">verificar archivo</a></td>
+                <td><a href="{{Storage::url($item->reportes)}}" target="_blank"><img border="0"
+                            src="{{asset('iconos/pdficon.png')}}" width="40" height="40">verificar archivo subido</a>
+                </td>
                 <td>{{$item->Descripcion}}</td>
-                <td> {{$item->programa_id}}</td>
-                <td class="" align="center">
+                <td>{{$item->fecha}}</td>
+                {{-- <td> {{$item->programa_id}}</td> --}}
+                <td>
                     <a href="">
                         <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-danger ">
                             Editar</button>

@@ -52,7 +52,7 @@
                                         <option value="">
                                             --Seleccione--</option>
                                         <option value={{ old('1') }}>SI CUMPLE</option>
-                                        </option>
+
                                         <option value={{ old('0') }}>NO CUMPLE</option>
                                     </select>
                                     <label for="fecha">Fecha de calificación</label>

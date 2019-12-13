@@ -15,8 +15,9 @@ class CreateDocsTable extends Migration
     {
         Schema::create('docs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('reportes')->nullable();
-            $table->string('Descripcion')->nullable();
+            $table->string('reportes');
+            $table->string('Descripcion');
+            $table->date('fecha');
             $table->unsignedBigInteger('programa_id');
             $table->foreign('programa_id')->references('id')->on('programas');
             $table->timestamps();

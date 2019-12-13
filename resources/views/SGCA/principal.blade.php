@@ -23,13 +23,21 @@
                                     target="_blank">
                                 <area href="SIGCUSNCH_PD02nuevo.PDF" shape="rect" coords="289, 291, 441, 339"
                                     target="_blank">
+                                {{-- pd03 --}}
                                 <area href="SIGCUSNCH_PD03.pdf" shape="rect" coords="291, 366, 440, 416">
                                 <area href="SIGCSUA_PD04.pdf" shape="rect" coords="291, 433, 439, 490">
-                                <area href="SIGCSUA_PD05.pdf" shape="rect" coords="292, 516, 441, 563">
-                                <area href="SIGCSUA_PD06.pdf" shape="rect" coords="292, 592, 442, 648">
-                                <area href="SIGCSUA_PE01.pdf" shape="rect" coords="580, 266, 939, 286" target="_blank">
-                                <area href="SIGCSUA_PE02.pdf" shape="rect" coords="581, 288, 940, 305" target="_blank">
-
+                                {{-- pd05 --}}
+                                <area href="{{asset('Documentos/Anexo 08.04 PE.04.04.10 Acccion Correctiva.pdf')}}"
+                                    shape="rect" coords="292, 516, 441, 563">
+                                {{-- pd06 --}}
+                                <area href="{{asset('SIGCSUA_PD06.pdf')}}" shape="rect" coords="292, 592, 442, 648">
+                                {{-- pe01 --}}
+                                <area href="{{asset('SIGCSUA_PE01.pdf')}}" shape="rect" coords="580, 266, 939, 286"
+                                    target="_blank">
+                                {{-- PE02 --}}
+                                <area href="{{asset('SIGCSUA_PE02.pdf')}}" shape="rect" coords="581, 288, 940, 305"
+                                    target="_blank">
+                                {{-- PM01 --}}
                                 <area href="{{asset('Documentos/PM01.pdf')}}" shape="rect" coords="582, 377, 949, 395"
                                     target="_blank">
                                 {{-- <area  href="SIGCSUA_PC02.pdf"shape="rect" coords="582, 396, 951, 412"  target="_blank"> --}}
@@ -54,7 +62,8 @@
                                     target="_blank">
                                 <area href="SIGCSUA_PD03.pdf" shape="rect" coords="582, 780, 831, 797" target="_blank">
                                 <area href="SIGCSUA_PD04.pdf" shape="rect" coords="584, 795, 933, 815" target="_blank">
-                                <area href="SIGCSUA_PD05.pdf" shape="rect" coords="585, 816, 809, 831" target="_blank">
+                                <area href="Anexo 08.04 PE.04.04.10 Acccion Correctiva.pdf" shape="rect"
+                                    coords="585, 816, 809, 831" target="_blank">
                                 <area href="SIGCSUA_PD06.pdf" shape="rect" coords="583, 834, 910, 855" target="_blank">
                                 <area href="Politica_de_Calidad.pdf" shape="rect" coords="34, 250, 162, 314"
                                     target="_blank">
@@ -62,9 +71,10 @@
                                     target="_blank">
                                 <area href="plan_seguridad/PLAN_SEGURIDAD_DOCUMENTAL_SIGCSUA.pdf" shape="rect"
                                     coords="736, 121, 871, 192" target="_blank">
+                                {{-- mapa de procesos --}}
                                 <area href="plancomunicacion.html" shape="rect" coords="585, 123, 717, 191">
                             </map>
-                            <img border="0" src="{{asset('imagenes/index2019.jpg')}}" width="1064" height="882"
+                            <img border="0" src="{{asset('imagenes/indexv1.png')}}" width="1064" height="882"
                                 usemap="#FPMap1">
 
                         </div>

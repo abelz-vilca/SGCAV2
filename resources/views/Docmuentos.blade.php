@@ -7,12 +7,13 @@
 </div>
 <table class="table table-striped table-bordered" id="estandar_detalle" align="center">
     <thead class="table table-striped">
-        <tr align="center" class="bg-info">
+        <tr class="bg-info">
             <th scope="col">N°</th>
             <th scope="col">Documento</th>
             <th scope="col">Num de Reporte</th>
-            <th scope="col">programaID</th>
-            <th align="center" scope="col">Acciones</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Programas</th>
+            <th scope="col">Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -20,9 +21,24 @@
         @foreach ($docus as $item)
         <tr disabled="disabled" class="table-light">
             <th scope="row">{{$item->id}}</th>
-            <td><a href="{{Storage::url($item->reportes)}}" target="_blank">verificar archivo</a></td>
+            <td><a href="{{Storage::url($item->reportes)}}" target="_blank"><img border="0"
+                        src="{{asset('iconos/pdficon.png')}}" width="40" height="40">verificar archivo</a></td>
             <td>{{$item->Descripcion}}</td>
-            <td> {{$item->programa_id}}</td>
+            <td>{{$item->fecha}}</td>
+            <td> <?php
+                if ($item->programa_id==1){
+                  echo "INGENIERÍA AGRONOMÍA";
+                } elseif ($item->programa_id==2) {
+                  echo "INGENIERÍA AGRÍCOLA";
+                } elseif ($item->programa_id==3) {
+                  echo "INGENIERÍA AGROFORESTAL";
+                } elseif ($item->programa_id==4) {
+                  echo "MEDICINA VETERINARIAL";
+                }
+                else {
+                 echo "a es menor que b";
+                }
+                                            ?></td>
             <td class="" align="center">
                 <a href="">
                     <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-danger ">
