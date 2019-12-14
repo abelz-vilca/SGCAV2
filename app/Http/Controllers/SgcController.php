@@ -17,7 +17,9 @@ class SgcController extends Controller
     {
         if (auth()->user()->rol == 'Admin') {
             return view('SGCA.principal');
-        } else {
+        }if(auth()->user()->rol == 'docente') {
+            return view('SGCA.principal');
+        }else {
             return view('error');
         }
         // return view('SGCA.principal');
