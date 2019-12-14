@@ -33,7 +33,7 @@
                 <th scope="row">{{$item->id}}</th>
                 <td align="center"><a href="{{Storage::url($item->archivo)}}" target="_blank">verificar Doc.
                         criteerio
-                        {{$item->id}}</a>
+                    </a>
                 </td>
                 <td align="center">
                     {{-- {{$item->calificacion}} --}}
