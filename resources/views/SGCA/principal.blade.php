@@ -27,24 +27,24 @@
                                     coords="289, 291, 441, 339" target="_blank">
 
                                 {{-- pd03 --}}
-                                <area href="{{asset('Documentos/AuditoriaInterna.pdf')}}" shape="rect"
+                                <area href="{{asset('Documentos/AuditoriaInternav1.pdf')}}" shape="rect"
                                     coords="291, 366, 440, 416" target="_blank">
 
-                                <area href="{{asset('Documentos/SalidaNoConforme.pdf')}}" shape="rect"
+                                <area href="{{asset('Documentos/SalidaNoConformev1.pdf')}}" shape="rect"
                                     coords="291, 433, 439, 490" target="_blank">
 
                                 {{-- pd05 --}}
-                                <area href="{{asset('Documentos/AcccionCorrectiva.pdf')}}" shape="rect"
+                                <area href="{{asset('Documentos/AcccionCorrectivav1.pdf')}}" shape="rect"
                                     coords="292, 516, 441, 563" target="_blank">
                                 {{-- pd06 --}}
-                                <area href=" {{asset('Documentos/Gestion_de_a_Mejora_Continua.pdf')}}" shape="rect"
+                                <area href=" {{asset('Documentos/Gestion_de_a_Mejora_Continuav1.pdf')}}" shape="rect"
                                     coords="292, 592, 442, 648" target="_blank">
 
                                 {{-- pd07 --}}
-                                <area href="{{asset('Documentos/Determincion_politica.pdf')}}" shape="rect"
+                                <area href="{{asset('Documentos/Determincion_politicav1.pdf')}}" shape="rect"
                                     coords="292, 650, 441, 715" target="_blank">
                                 {{-- pd08 --}}
-                                <area href=" {{asset('Documentos/Objetivocalidad.pdf')}}" shape="rect"
+                                <area href=" {{asset('Documentos/Objetivocalidadv1.pdf')}}" shape="rect"
                                     coords="292, 700, 442, 790" target="_blank">
 
 
