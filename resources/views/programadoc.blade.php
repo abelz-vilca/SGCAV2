@@ -133,7 +133,8 @@
                 <td>{{$item->fecha}}</td>
                 {{-- <td> {{$item->programa_id}}</td> --}}
                 <td>
-                    <a href="{{Storage::url($item->reportes)}}" target="_blank"><img border="0"
+                    {{-- https://docs.google.com/viewer?url=http --}}
+                    <a href="{{Storage::url( $item->reportes)}}" target="_blank"><img border="0"
                             src="{{asset('iconos/pdficon.png')}}" width="40" height="40">
                         <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info ">
                             Ver ARCHIVO</button>
