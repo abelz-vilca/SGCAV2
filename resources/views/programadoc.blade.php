@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Director (Usuario logueado)</label>
+                                        <label>Director(a) (Usuario logueado)</label>
 
                                         <input disabled="false" type="text" class="form-control"
                                             value="<?php echo  (auth()->user()->name); ?>">
@@ -125,16 +125,18 @@
             @foreach ($docs as $item)
             <tr disabled="disabled" class="table-light">
                 <th scope="row">{{$item->id}}</th>
-                <td><a href="{{Storage::url($item->reportes)}}" target="_blank"><img border="0"
-                            src="{{asset('iconos/pdficon.png')}}" width="40" height="40">verificar archivo subido</a>
+                <td><a href="{{Storage::url($item->reportes)}}" target="_blank">
+                        {{-- <img border="0" src="{{asset('iconos/pdficon.png')}}" width="40" height="40"> --}}
+                        verificar archivo subido</a>
                 </td>
                 <td>{{$item->Descripcion}}</td>
                 <td>{{$item->fecha}}</td>
                 {{-- <td> {{$item->programa_id}}</td> --}}
                 <td>
-                    <a href="">
-                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-danger ">
-                            Editar</button>
+                    <a href="{{Storage::url($item->reportes)}}" target="_blank"><img border="0"
+                            src="{{asset('iconos/pdficon.png')}}" width="40" height="40">
+                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info ">
+                            Ver ARCHIVO</button>
                     </a>
                 </td>
                 </td>

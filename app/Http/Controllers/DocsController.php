@@ -37,7 +37,7 @@ class DocsController extends Controller
     public function docs($programa_id)
     {
       
-        $docs=App\Docs::all();
+        
         $id = App\Programa::findOrFail($programa_id);
         $docs = App\Docs::where('programa_id', $programa_id)->get();
         
