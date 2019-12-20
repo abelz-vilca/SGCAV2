@@ -49,9 +49,10 @@ class PagesController extends Controller
             // $programas = App\Programa::where('id',auth()->user()->programa_id)->get();
         } else {
             $programas = App\Programa::all();
+            return view('reportes.reporteprogramas', compact('programas'));
         }
 
-        return view('reportes.reporteprogramas', compact('programas', 'error'));
+        // return view('reportes.reporteprogramas', compact('programas', 'error'));
     }
     public function reportes()
     {

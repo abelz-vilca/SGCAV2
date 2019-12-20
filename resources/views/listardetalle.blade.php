@@ -12,7 +12,7 @@
                     value="{{$programas->nombre_programa}}"></p>
         </div>
         <div class="col-sm-4">
-            <h4 class="fas fa-align-right">ID</h4>
+            <h4 class="fas fa-align-right">Num de Programa</h4>
             <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->id}}"></p>
         </div>
         <div class="col-sm-4">
