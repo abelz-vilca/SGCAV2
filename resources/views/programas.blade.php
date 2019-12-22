@@ -38,16 +38,16 @@
 
                                 <a href="{{route('criterio_programaid', $item)}}">
                                     <button type="button"
-                                        class="btn waves-effect waves-light btn-rounded btn-outline-primary">CRITERIOS</button>
+                                        class="btn waves-effect waves-light btn-rounded btn-outline-primary">Criterios</button>
                                 </a> <a href="{{route('estandar_programaid', $item)}}">
                                     <button type="button"
                                         class="btn waves-effect waves-light btn-rounded btn-outline-warning">
-                                        ESTANDAR
+                                        Estándares
                                     </button>
                                 </a>
                                 <a href="{{route('docs_programaid', $item)}}">
                                     <button type="button"
-                                        class="btn waves-effect waves-light btn-rounded btn-outline-success">Doc</button>
+                                        class="btn waves-effect waves-light btn-rounded btn-outline-success">Reportes</button>
                                 </a>
 
                                 {{-- <a href="{{route('criterio_programaid', $item)}}" type="button" class="btn
