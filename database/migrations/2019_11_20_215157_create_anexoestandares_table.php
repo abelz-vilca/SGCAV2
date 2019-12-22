@@ -16,6 +16,8 @@ class CreateAnexoestandaresTable extends Migration
         Schema::create('anexoestandares', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('archivoae')->nullable();
+            $table->string('Descripcion');
+            $table->date('fecha');
             $table->unsignedBigInteger('anexoep_id');
             $table->foreign('anexoep_id')->references('id')->on('estandar_programa');
             $table->timestamps();

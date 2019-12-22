@@ -25,10 +25,15 @@ Route::get('/inicio', 'PagesController@iniciar')->name('inicio');
 
 //subir reportes de los programas de estudios
 Route::get('docs/{programa_id}', ['as' => 'docs_programaid', 'uses' => 'DocsController@docs']);
-// Route::put('/subirdoc/{id}', ['as' => 'doc.update', 'uses' => 'DocsrController@updates']);
 Route::post('/subirdoc', ['as' => 'subir.doc', 'uses' => 'DocsController@updates']);
 ///mostrar documentos
 Route::get('/informes', ['as' => 'informes', 'uses' => 'DocsController@informes']);
+
+//ruta para subir anexos de Estandares
+Route::get('/anexo/{estandar_id}', ['as' => 'anexo_estandarid', 'uses' => 'EstandarProgramaController@anexo']); //capturar id
+Route::post('/anexos', ['as' => 'subir.anexo', 'uses' => 'EstandarProgramaController@anexos']); //subir archivos
+Route::get('/totalanexo', ['as' => 'tanexo', 'uses' => 'EstandarProgramaController@tanexo']); //muestra total de anexos
+
 
 //PRUEBA PARA INPUT
 Route::get('/subir', 'PruebaController@subirArchivo')->name('subir');

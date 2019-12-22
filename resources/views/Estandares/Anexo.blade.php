@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card-header" style="background-color: #success">
-                DOCUMENTOS
+                Anexos de Estándares
             </div>
             <div class="card">
                 <div class="card-body" style="background-color: #f6f6f6">
@@ -13,38 +13,110 @@
                     <div class="alert alert-success">{{ session('mensaje') }}
                     </div>
                     @endif
-                    <form method="POST" action="{{ route('subir.doc')}}" enctype="multipart/form-data">
+                    <form method="POST" action="{{route('subir.anexo')}}" enctype="multipart/form-data">
                         <div class="form-body">
                             {{-- @method('PUT') --}}
                             @csrf
-                            @error('Descripcion')
+                            @error('Archivoae')
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                indique en numero de Reporte
+                                no ha subido ningun anexo
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            @enderror
+                            @enderror @if ($errors->has('Descripcion'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                Describa el anexo
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            @endif
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-7">
                                     <div class="form-group has-success">
                                         <label>Programa de Estudio</label>
-                                        <input disabled="false" type="text" class="form-control has-success"
-                                            value="<?php echo($id->nombre_programa); ?>" placeholder="programa">
-                                    </div>
+                                        <input disabled="false" type="text has-success" class="form-control"
+                                            value="<?php if($estandarid->programa_id==1){
+                                                echo "INGENIERÍA AGRONOMÍA";} elseif ($estandarid->programa_id==2) {
+                  echo "INGENIERÍA AGRÍCOLA";
+                } elseif ($estandarid->programa_id==3) {
+                  echo " INGENIERÍA AGROFORESTAL";
+                } elseif ($estandarid->programa_id==4) {
+                  echo " MEDICINA VETERINARIA";
+                }elseif ($estandarid->programa_id==5) {
+                  echo " ESCUELA PROFESIONAL DE BIOLOGÍA";
+                } elseif ($estandarid->programa_id==6) {
+                  echo " EDUCACIÓN INICIAL";
+                } elseif ($estandarid->programa_id==7) {
+                  echo " EDUCACIÓN PRIMARIA";
+                }elseif ($estandarid->programa_id==8) {
+                  echo " EDUCACIÓN SECUNDARIA-Ingles y Lengua Española";
+                } elseif ($estandarid->programa_id==9) {
+                  echo " EDUCACIÓN SECUNDARIA-Matemática Física e Informática";
+                } elseif ($estandarid->programa_id==10) {
+                  echo " EDUCACIÓN SECUNDARIA-Ciencias Sociales y Filosofia con mencion en Turismo";
+                }elseif ($estandarid->programa_id==11) {
+                  echo " EDUCACIÓN SECUNDARIA-Lengua Española y Literatura con mencion en comunicación";
+                } elseif ($estandarid->programa_id==12) {
+                  echo " EDUCACIÓN FÍSICA";
+                } elseif ($estandarid->programa_id==13) {
+                  echo " ADMINISTRACIÓN DE EMPRESAS";
+                } elseif ($estandarid->programa_id==14) {
+                  echo " CONTABILIDAD Y AUDITORÍA";
+                }elseif ($estandarid->programa_id==15) {
+                  echo " ECONOMÍA";
+                } elseif ($estandarid->programa_id==16) {
+                  echo " CIENCIAS DE LA COMUNICACIÓN";
+                } elseif ($estandarid->programa_id==17) {
+                  echo " CIENCIAS DE ARQUEOLOGÍA E HISTORIA";
+                }elseif ($estandarid->programa_id==18) {
+                  echo " CIENCIAS DE ANTROPOLOGÍA SOCIAL";
+                } elseif ($estandarid->programa_id==19) {
+                  echo "  CIENCIAS DE TRABAJO SOCIAL";
+                } elseif ($estandarid->programa_id==20) {
+                  echo "  DERECHO";
+                }elseif ($estandarid->programa_id==21) {
+                  echo "  INGENIERÍA CIVIL";
+                } elseif ($estandarid->programa_id==22) {
+                  echo "  INGENIERÍA DE MINAS";
+                } elseif ($estandarid->programa_id==23) {
+                  echo "  INGENIERÍA DE SISTEMAS";
+                } elseif ($estandarid->programa_id==24) {
+                  echo "  CIENCIAS FÍSICO MATEMÁTICAS-Estadistica";
+                }elseif ($estandarid->programa_id==25) {
+                  echo " CIENCIAS FÍSICO MATEMÁTICAS-Matemática";
+                } elseif ($estandarid->programa_id==26) {
+                  echo "  CIENCIAS FÍSICO MATEMÁTICAS-Física";
+                } elseif ($estandarid->programa_id==27) {
+                  echo " INGENIERÍA QUÍMICA";
+                }  elseif ($estandarid->programa_id==28) {
+                  echo " INGENIERÍA EN INDUSTRIAS ALIMENTARIASL";
+                }elseif ($estandarid->programa_id==29) {
+                  echo "  INGENIERÍA AGROINDUSTRIAL";
+                } elseif ($estandarid->programa_id==30) {
+                  echo " MEDICINA HUMANA";
+                } elseif ($estandarid->programa_id==31) {
+                  echo " FARMACIA Y BIOQUÍMICA";
+                }elseif ($estandarid->programa_id==32) {
+                  echo " OBSTETRICIA";
+                } elseif ($estandarid->programa_id==33) {
+                  echo "ENFERMERÍA";
+                }else {
+                 echo "otro programa";
+                }?>" placeholder="programa">
+
+                                          
+            
+                                          
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-group has-success">
-                                        <label>Fecha</label>
-                                        <input disabled="false" type="text" class="form-control has-success"
-                                            value="<?php echo date("d/m/Y"); ?>">
-                                    </div>
                                 </div>
-                                <div class="col-md-4">
+                                
+                                <div class="col-md-5">
                                     <div class="form-group has-success">
                                         <label>Director(a) (Usuario logueado)</label>
 
-                                        <input disabled="false" type="text" class="form-control has-success"
+                                        <input disabled="false" type="text has-success" class="form-control"
                                             value="<?php echo  (auth()->user()->name); ?>">
 
                                     </div>
@@ -52,36 +124,21 @@
                             </div>
                             <div class="row" style="background-color: #dddddd">
                                 <div class="col-md-5" style="background-color: #c3c3c3">
-                                    <div class="form-group">
-                                        <label for="archivo">SELECIONE EL DOCUMENTO</label>
+                                    <div class="form-group has-success">
+                                        <label for="archivo">Seleccione el Documento</label>
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
-                                                <input type="file" class="form-control-file" name="reportes"
+                                                <input type="file" class="form-control-file has-success" name="archivoae"
                                                     id="archivo">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label for="Descripcion">Reporte</label>
-                                        <div class="controls">
-                                            <select name="Descripcion" id="Descripcion" required class="form-control">
-                                                <option value="">
-                                                    --Seleccione su Reporte--</option>
-                                                <option value="PRIMER REPORTE">Primer Reporte</option>
-
-                                                <option value="SEGUNDO REPORTE">Segundo Reporte</option>
-                                                <option value="TERCER REPORTE">Tercer Reporte</option>
-
-                                                <option value="CUARTO REPORTE">Cuarto Reporte</option>
-                                                <option value="QUINTO REPORTE">Quinto Reporte</option>
-
-                                                <option disabled="true" value="">Sexto Reporte</option>
-
-                                            </select>
-
-                                        </div>
+                                    <div class="form-group has-success">
+                                        <label for="fecha">Descripción del Anexo</label>
+                                    <input type="text has-success" name="Descripcion" class="form-control"
+                                        placeholder="Anexo 1.01" />
                                     </div>
                                     {{-- <div class="form-group">
                                         <label for="fecha">Seleccione Reporte</label>
@@ -92,8 +149,8 @@
                                 <div class="col-md-2">
                                     <div class="form-group has-danger">
                                         <label for="fecha">ID</label>
-                                        <input color:blue type="text" class="form-control has-danger" name="programa_id"
-                                            value="<?php echo($id->id); ?>"><small class="form-control-feedback">no escribir en este campo</small>
+                                        <input type="text has-danger" class="form-control" name="anexoep_id"
+                                            value="<?php echo($estandarid->id); ?>">
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +171,7 @@
             <tr class="bg-info">
                 <th scope="col">N°</th>
                 <th scope="col">Documento</th>
-                <th scope="col">Num de Reporte</th>
+                <th scope="col">Descripcion</th>
                 <th scope="col">Fecha de Cambio</th>
                 {{-- <th scope="col">programaID</th> --}}
                 <th scope="col">Acciones</th>
@@ -122,19 +179,19 @@
         </thead>
         <tbody>
             {{-- @foreach ($estandarprograma as $item ) --}}
-            @foreach ($docs as $item)
+            @foreach ($programa as $item)
             <tr disabled="disabled" class="table-light">
                 <th scope="row">{{$item->id}}</th>
-                <td><a href="{{Storage::url($item->reportes)}}" target="_blank">
+                <td><a href="{{Storage::url($item->archivoae)}}" target="_blank">
                         {{-- <img border="0" src="{{asset('iconos/pdficon.png')}}" width="40" height="40"> --}}
-                        verificar archivo subido</a>
+                        verificar Anexo</a>
                 </td>
                 <td>{{$item->Descripcion}}</td>
                 <td>{{$item->fecha}}</td>
                 {{-- <td> {{$item->programa_id}}</td> --}}
                 <td>
                     {{-- https://docs.google.com/viewer?url=http --}}
-                    <a href="{{Storage::url( $item->reportes)}}" target="_blank"><img border="0"
+                    <a href="{{Storage::url($item->archivoae)}}" target="_blank"><img border="0"
                             src="{{asset('iconos/pdficon.png')}}" width="40" height="40">
                         <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info ">
                             Ver ARCHIVO</button>

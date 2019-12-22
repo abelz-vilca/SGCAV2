@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" >
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header" align="center"><img src="{{asset('imagenes/logoinicio.png')}}" width="400"
+                <div class="card-header" align="center"><img src="{{asset('imagenes/logoinicio.png')}}" width="350"
                         height="60" alt="">
                     <div class="card-header" align="center">
                         {{ __('Página de Inicio') }}</div>
@@ -63,7 +63,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-success">
+                                <button type="submit" class="btn btn-success btn-align-center">
                                     {{ __('Ingresar') }}
                                 </button>
 

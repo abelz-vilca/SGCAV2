@@ -5,46 +5,46 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header" style="background-color: orange;">
-                DATOS GENERALES
+            <div class="card-header" style="background-color:#9C9C9C;">
+                 DATOS GENERALES
             </div>
-            <div class="card-body" style="background-color: #white;">
+            <div class="card-body" style="background-color:light;">
                 <form>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-row">
-                                <div class="form-group col-md-12">
+                                <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">INSTITUCIÓN</label>
-                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
+                                    <input  type="email" class="form-control has-success" id="inputEmail4"
                                         placeholder="UNIVERSIDAD NACIONAL DE SAN CRISTOBAL DE HUAMANGA">
                                 </div>
-                                <div class="form-group col-md-12">
+                                <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">OFICINA</label>
-                                    <input type="email" class="form-control" id="inputEmail4"
+                                    <input type="email" class="form-control form-control-success" id="inputEmail4"
                                         placeholder="Oficina General de Calidad y Acreditación">
                                 </div>
-                                <div class="form-group col-md-12">
+                                <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">FECHA</label>
-                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
+                                    <input  type="text" class="form-control has-success" id="inputEmail4"
                                         value="<?php echo date("d/m/Y"); ?>" placeholder="Fecha">
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-row">
-                                <div class="form-group col-md-12">
+                                <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">JEFE DE LA OFICINA</label>
-                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
+                                    <input  type="email" class="form-control has-success" id="inputEmail4"
                                         placeholder="Dra. Luisa Alcarraz Curi">
                                 </div>
-                                <div class="form-group col-md-12">
+                                <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">CONTACTO</label>
-                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
+                                    <input  type="email" class="form-control has-success" id="inputEmail4"
                                         placeholder="066-403240">
                                 </div>
-                                <div class="form-group col-md-12">
+                                <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">REPORTE</label>
-                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
+                                    <input  type="email" class="form-control has-success" id="inputEmail4"
                                         placeholder="Quinto Reporte">
                                 </div>
                             </div>

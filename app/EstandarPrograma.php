@@ -34,6 +34,5 @@ class EstandarPrograma extends Model
 
         );
     }
-    public function sumas()
-    { }
+    
 }

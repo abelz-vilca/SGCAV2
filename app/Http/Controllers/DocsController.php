@@ -31,7 +31,12 @@ class DocsController extends Controller
         
     }
     public function informes(){
-        $docus=App\Docs::all();
+        if (auth()->user()->rol == 'Admin') {
+            $docus=App\Docs::all();
+        } else {
+            return view('error');
+        }
+       
         return view('Docmuentos',compact('docus'));
     }
     public function docs($programa_id)

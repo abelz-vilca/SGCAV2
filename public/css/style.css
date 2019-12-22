@@ -539,7 +539,7 @@ html body .bg-white {
 }
 .label-light-info {
     background-color: #cfecfe;
-    color: #1976d2
+    color: #1d5fa1
 }
 .label-light-warning {
     background-color: #fff8ec;
@@ -573,7 +573,7 @@ html body .bg-white {
 }
 .pagination>li>a,
 .pagination>li>span {
-    color: #263238
+    color: #00a8fb
 }
 .pagination>li>a:focus,
 .pagination>li>a:hover,

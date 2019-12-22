@@ -23,7 +23,12 @@ class UsuarioController extends Controller
      */
     public function certificados()
     {
-        $certificado = App\Certificaado::all();
+        if (auth()->user()->rol == 'Admin') {
+            $certificado = App\Certificaado::all();
+        } else {
+            return view('error');
+        }
+       
         return view('CERTIFICADOS.certificados', compact('certificado'));
     }
     public function index()

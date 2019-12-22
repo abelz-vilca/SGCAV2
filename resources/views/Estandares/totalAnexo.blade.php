@@ -1,78 +1,48 @@
 @extends('layouts.plantilla')
 
 @section('name')
-
-
-
 <div class="container-fluid" class="container-my-4">
-
+    
     <div class="card-header">
-        CALIFICACIÓN DE LOS ESTÁNDARES
+        Reportes
     </div>
-    <table class="display nowrap table table-hover table-striped table-bordered" id="estandar_detalle" align="center">
+    <table class="display nowrap table table-hover table-striped table-bordered" id="estandar_detalle">
         <thead class="table table-striped">
-            <tr align="center" class="bg-info">
+            <tr class="bg-info">
                 <th scope="col">N°</th>
-                <th scope="col">Documento</th>
-                <th scope="col">Calificacion</th>
+                <th scope="col">Programas</th>
+                <th scope="col">Anexos</th>
                 <th scope="col">Descripcion</th>
-                <th scope="col">Fecha calificacion</th>
-                <th scope="col">Estandar</th>
-                {{-- <th scope="col">programa</th> --}}
-                {{-- <th scope="col">estandar_NAME</th> --}}
-                {{-- <th scope="col">P_id</th> --}}
-                <th align="center" scope="col">Acciones</th>
+                <th scope="col">Fecha de Cambio</th>
+                {{-- <th scope="col">programaID</th> --}}
+                <th scope="col">Acciones</th>
             </tr>
         </thead>
         <tbody>
-
             {{-- @foreach ($estandarprograma as $item ) --}}
-            @foreach ($devolverprograma as $iteme )
+            @foreach ($tanexo as $item)
             <tr disabled="disabled" class="table-light">
-                <th scope="row">{{$iteme->id}}</th>
-                <td><a href="{{Storage::url($iteme->archivo)}}" target="_blank">verificar archivo</a></td>
-                <td align="center">{{$iteme->calificacion}}</td>
-                <td align="center">{{$iteme->descripcion}}</td>
-                <td align="center">{{$iteme->fecha}}</td>
-                <td align="center">Estándar: {{$iteme->estandar_id}}</td>
-                {{-- <td align="center">{{$iteme->programa_id}}</td> --}}
-                {{-- <td>{{$iteme->nombre_estandar}}</td> --}}
-
-                {{-- <td>{{$iteme->programa_id}}</td> --}}
-                {{--// <td>{{$iteme->programa_id}}</td> --}}
-                {{-- <td>{{$item->programa_id}}</td> --}}
-
-                <td class="" align="center">
-
-                    <a href="{{route('programas.editar', $iteme)}}">
-                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-success ">
-                            Calificar</button>
-                    </a>
-                    <a href="{{route('anexo_estandarid', $iteme)}}">
-                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info ">
-                            Anexos</button>
-    
-                    </a>
-                    {{-- <a href="" type="button" class="btn btn-info">Criterios</a> --}}
+                <th scope="row">{{$item->id}}</th>
+                <td>{{$item->programa_id}}</td>
+                <td><a href="{{Storage::url($item->archivoae)}}" target="_blank">
+                        {{-- <img border="0" src="{{asset('iconos/pdficon.png')}}" width="40" height="40"> --}}
+                        verificar Anexo</a>
                 </td>
-                {{-- <td>
-                <a href="">
-                    <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info ">
-                        Anexos</button>
-
-                </a>
-            </td> --}}
-               
+                <td>{{$item->Descripcion}}</td>
+                <td>{{$item->fecha}}</td>
+                {{-- <td> {{$item->programa_id}}</td> --}}
+                <td>
+                    {{-- https://docs.google.com/viewer?url=http --}}
+                    <a href="{{Storage::url($item->archivoae)}}" target="_blank"><img border="0"
+                            src="{{asset('iconos/pdficon.png')}}" width="40" height="40">
+                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-outline-info ">
+                            Ver ARCHIVO</button>
+                    </a>
+                </td>
+                </td>
             </tr>
-            {{-- @foreach ($devolverisprograma as $iteme )
-                <tr>
-                    <td>{{$iteme->programa_id}}</td>
-            </tr> --}}
-            {{-- @endforeach() --}}
             @endforeach()
-
         </tbody>
-
     </table>
     {{-- @include('modal') --}}
 </div>
@@ -124,6 +94,5 @@
                 }
 }
 </script>
-
 
 @endsection()

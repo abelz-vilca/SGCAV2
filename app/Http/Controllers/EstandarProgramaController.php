@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 use carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Estandar;
+
 use App;
 
 class EstandarProgramaController extends Controller
@@ -18,11 +18,44 @@ class EstandarProgramaController extends Controller
      */
 
 
-    public function index()
-    {
-        //
+    public function tanexo(){
+        
+        $tanexo=App\Anexoestandar::all();
+        return view('Estandares.totalAnexo',compact('tanexo','programas'));
     }
+    public function anexo($estandar_id)
+    {
+        $estandarid = App\EstandarPrograma::findOrFail($estandar_id);
+        $programa = App\Anexoestandar::where('anexoep_id', $estandar_id)->get();
+       
+       
+        return view('Estandares.Anexo', compact('estandarid', 'programa'));
+    }
+    public function anexos(Request $request)
+    {
+        $request->validate([
 
+            'archivoae' => 'required',
+            'Descripcion' => 'required'
+
+        ]);
+        $anexooupdate = new App\Anexoestandar;
+        // $docsoupdate = App\Docs::findOrFail($id);
+
+        if ($request->hasFile('archivoae')) {
+            $anexooupdate->archivoae = $request->file('archivoae')->store('public/Anexos');
+        }
+        $anexooupdate->Descripcion = $request->Descripcion;
+        $anexooupdate->fecha =  Carbon::now();
+       
+        
+        $anexooupdate->anexoep_id = $request->anexoep_id;
+       
+        // $docsoupdate->fecha = Carbon::now();
+
+        $anexooupdate->save();
+        return back()->with('mensaje', 'anexo se subió con éxito');
+    }
     /**
      * Show the form for creating a new resource.
      *

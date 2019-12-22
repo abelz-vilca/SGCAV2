@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/icon.png')}}">
     <title>OGCA</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -54,11 +54,11 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            {{-- <img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
+                            {{-- <img src="{{asset('assets/images/logine.png')}}" alt="homepage" class="dark-logo" />
                             --}}
                             <img src="" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="{{asset('assets/images/logo-light-icon.png')}}" alt="homepage"
+                            <img src="{{asset('assets/images/logine.png')}}" alt="homepage"
                                 class="light-logo" />
                         </b>
                         <!--End Logo icon -->
@@ -184,17 +184,18 @@
                         <li class="nav-devider"></li>
                         <!-- <li class="nav-small-cap">PERSONAL</li> -->
 
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
-                                    class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">menu</span></a>
+                        <li> <a class="has-arrow waves-effect waves-info" href="#" aria-expanded="false"><i
+                                    class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Menu</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{route('acreditacion')}}"> Acreditación</a></li>
                                 <li><a href="{{asset('errors')}}"> Licenciamiento</a></li>
                                 <li><a href="{{asset('sgc')}}"> SGC</a></li>
                                 <!-- submenu-->
-                                <li> <a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
+                                <li> <a class="has-arrow waves-effect waves-orange" href="#" aria-expanded="false">
                                         <i class=" icon-chart"></i><span class="hide-menu"> REPORTES</span></a>
                                     <ul aria-expanded="false" class="collapse">
                                         <li><a class="icon-file" href="{{route('informes')}}">Reportes</a></li>
+                                        {{-- <li><a class="icon-file" href="{{route('tanexo')}}">anexos</a></li> --}}
                                         <li><a class="icon-crop" href="{{route('reporte')}}"> PROGRAMAS</a></li>
                                         <li><a class="fa fa-cubes" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
