@@ -42,7 +42,7 @@ class DocsController extends Controller
     public function docs($programa_id)
     {
       
-        
+        set_time_limit(240);
         $id = App\Programa::findOrFail($programa_id);
         $docs = App\Docs::where('programa_id', $programa_id)->get();
         
@@ -56,6 +56,7 @@ class DocsController extends Controller
             'Descripcion' => 'required'
 
         ]);
+        set_time_limit(240);
         $docsoupdate = new App\Docs;
         // $docsoupdate = App\Docs::findOrFail($id);
 

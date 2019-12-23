@@ -56,7 +56,7 @@
                                         <label for="archivo">SELECIONE EL DOCUMENTO</label>
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
-                                                <input type="file" class="form-control-file" name="reportes"
+                                                <input type="file" class="form-control-file" name="reportes" value="1024000000"
                                                     id="archivo">
                                             </div>
                                         </div>
