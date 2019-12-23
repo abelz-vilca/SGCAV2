@@ -59,9 +59,13 @@
             <a class="btn waves-effect waves-light btn-rounded btn-info" href="programas">CALIFICAR PROGRAMAS</a>
 
             <hr>
+            <a class="btn waves-effect waves-light btn-rounded btn-success" href="https://drive.google.com/open?id=1LiHc7Ss6Bmf2wIMwBmqDokGanaPoxjt8" target="_blank">Archivos Institucionales
+            </a>
+            <hr>
             <a class="btn waves-effect waves-light btn-rounded btn-warning" href="actualizardatos">Actualizar Datos
                 Miembros</a>
-
+               
+                
             <h3 align="center" class="text center-block"> Estimados Docentes debe actualizar los datos de los miembros
                 de comités de
                 autoevaluación</h3>
