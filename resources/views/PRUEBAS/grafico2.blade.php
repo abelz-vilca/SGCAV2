@@ -2,45 +2,53 @@
 
 @section('name')
 
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawStuff);
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ["Element", "Calificación", { role: "style" } ],
+      ["OBSTETRICIA", 257, "#b87333"],
+      ["EDUCACIÓN FÍSICA", 241, "silver"],
+      ["DERECHO", 207, "gold"],
+      ["EDUCACIÓN INICIAL", 192, "color: #e5e4e2"],
+      ["ING. AGRÍCOLA", 186, "#b87333"],
+      ["ED. SEC.Matemática Física e Informática", 184, "silver"],
+      ["ING. QUÍMICA", 184, "gold"],
+      ["ING. AGROINDUSTRIAL", 184, "color: #e5e4e2"],
 
-      function drawStuff() {
-        var data = new google.visualization.arrayToDataTable([
-          ['Programas de Estudios', 'Percentage'],
-          ["King's pawn (e4)", 44],
-          ["Queen's pawn (d4)", 31],
-          ["Knight to King 3 (Nf3)", 12],
-          ["Queen's bishop pawn (c4)", 10],
-          ['Other', 3]
-        ]);
+      ["MED. VETERINARIA", 178, "#b87333"],
+      ["ING. EN IND. ALIMENTARIAS", 177, "silver"],
+      ["ING. AGRONOMÍA", 170, "gold"],
+      ["ENFERMERÍA", 170, "color: #e5e4e2"],
+      ["ED. SEC. Lengua Española y Literatura con mencion en comunicación", 163, "#b87333"],
+      ["ING. DE MINAS", 154, "silver"],
+      ["ING. AGROFORESTAL", 148, "gold"],
+      ["ING. CIVIL", 147, "color: #e5e4e2"],
+      ["ED. PRIMARIA", 143,"gold"],
 
-        var options = {
-          width: 800,
-          legend: { position: 'none' },
-          chart: {
-            title: 'Porcentaje de Avance de los Programas de estudios - 2018 UNSCH',
-            // subtitle: 'popularity by percentage' 
-          },
-          // axes: {
-          //   x: {
-          //     0: { side: 'top', label: 'White to move'} // Top x-axis.
-          //   }
-          // },
-          bar: { groupWidth: "90%" }
-        };
+    ]);
 
-        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
-        // Convert the Classic options to Material options.
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      };
-    </script>
-  </head>
-  <body>
-    <div id="top_x_div" style="width: 800px; height: 600px;"></div>
-  </body>
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1,
+                     { calc: "stringify",
+                       sourceColumn: 1,
+                       type: "string",
+                       role: "annotation" },
+                     2]);
+
+    var options = {
+      title: "Porcentaje de Avance de los Programas de Estudios - 2018 - UNSCH",
+      width: 900,
+      height: 600,
+      bar: {groupWidth: "95%"},
+      legend: { position: "none" },
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+    chart.draw(view, options);
+}
+</script>
+<div id="columnchart_values" style="width: 900px; height: 600px;"></div>
 
 @endsection
