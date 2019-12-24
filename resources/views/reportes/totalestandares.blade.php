@@ -3,7 +3,7 @@
 
 <?php
 echo"<br/><br/>";
-echo"ESTANDARES DE LOS PROGRAMAS DE ESTUDIOS</br>";
+echo"AVANCE DE ESTANDARES DE LOS PROGRAMAS DE ESTUDIOS UNSCH-2019</br>";
 $programas; $programa01; $programa02; $programa03; $programa04; $programa05;
 $programa06; $programa07; $programa08; $programa09; $programa10; $programa11;
 $programa12; $programa13; $programa14; $programa15; $programa16; $programa17;
@@ -21,7 +21,7 @@ $programa30; $programa31; $programa32; $programa33;
 
         var data = google.visualization.arrayToDataTable([
 
-          ['ESTANDARES DE LOS PROGRAMAS','INGENIERÍA AGRONOMÍA','INGENIERÍA AGRÍCOLA','INGENIERÍA AGROFORESTAL',
+          [' AVANCE ESTANDARES DE LOS PROGRAMAS 2019','INGENIERÍA AGRONOMÍA','INGENIERÍA AGRÍCOLA','INGENIERÍA AGROFORESTAL',
           'MEDICINA VETERINARIA','ESCUELA PROFESIONAL DE BIOLOGÍA','EDUCACIÓN INICIAL','EDUCACIÓN PRIMARIA',
           'EDUCACIÓN SECUNDARIA-Ingles y Lengua Española', 'EDUCACIÓN SECUNDARIA-Matemática Física e Informática',
           'EDUCACIÓN SECUNDARIA-Ciencias Sociales y Filosofia con mencion en Turismo',
@@ -83,8 +83,5 @@ $programa30; $programa31; $programa32; $programa33;
 </script>
 <div id="columnchart_material" style="width: 1500px; height: 600px;"></div>
 
-<div>
-  <h4>ESTANDARES DE LOS PROGRAMAS DE ESTUDIOS</h4>
 
-</div>
 @endsection

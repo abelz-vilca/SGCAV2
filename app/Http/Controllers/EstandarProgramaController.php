@@ -35,7 +35,7 @@ class EstandarProgramaController extends Controller
     {
         $request->validate([
 
-            'archivoae' => 'required',
+            // 'archivoae' => 'required',
             'Descripcion' => 'required'
 
         ]);

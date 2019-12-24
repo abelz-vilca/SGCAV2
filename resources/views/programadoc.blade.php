@@ -4,7 +4,7 @@
 <div class="container-fluid" class="container-my-4">
     <div class="row">
         <div class="col-lg-12">
-            <div class="card-header" style="background-color: #success">
+            <div class="card-header" style="background-color: #C39178">
                 DOCUMENTOS
             </div>
             <div class="card">
@@ -50,8 +50,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" style="background-color: #dddddd">
-                                <div class="col-md-5" style="background-color: #c3c3c3">
+                            <div class="row" style="background-color: #C39178">
+                                <div class="col-md-5" style="background-color:">
                                     <div class="form-group">
                                         <label for="archivo">SELECIONE EL DOCUMENTO</label>
                                         <div class="input-group mb-3">
@@ -93,12 +93,18 @@
                                     <div class="form-group has-danger">
                                         <label for="fecha">ID</label>
                                         <input color:blue type="text" class="form-control has-danger" name="programa_id"
-                                            value="<?php echo($id->id); ?>"><small class="form-control-feedback">no escribir en este campo</small>
+                                            value="<?php echo($id->id); ?>"><small class="form-control-feedback">no escribir este campo</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-success" value="Guardar">
+                        <input style='width:150px; height:50px' type="submit" class="btn btn-success" value="Guardar">
+                        <a style='width:150px; height:50px' align="center" type="button" class="btn btn-info "
+                            href="{{route('programa')}}">
+                         
+                            <img src="{{asset('imagenes/regresar.png')}}" width="40" height="35">
+                            Regresar
+                        </a>
                     </form>
 
                 </div>

@@ -4,8 +4,8 @@
 <div class="container-fluid" class="container-my-4">
     <div class="row">
         <div class="col-lg-12">
-            <div class="card-header" style="background-color: #success">
-                Anexos de Estándares
+            <div class="card-header" style="background-color: #9C9C9C">
+                Anexos del Estándar
             </div>
             <div class="card">
                 <div class="card-body" style="background-color: #f6f6f6">
@@ -17,7 +17,7 @@
                         <div class="form-body">
                             {{-- @method('PUT') --}}
                             @csrf
-                            @error('Archivoae')
+                            @error('archivoae')
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                 no ha subido ningun anexo
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -123,7 +123,7 @@
                                 </div>
                             </div>
                             <div class="row" style="background-color: #dddddd">
-                                <div class="col-md-5" style="background-color: #c3c3c3">
+                                <div class="col-md-6" style="background-color: #c3c3c3">
                                     <div class="form-group has-success">
                                         <label for="archivo">Seleccione el Documento</label>
                                         <div class="input-group mb-3">
@@ -146,17 +146,22 @@
                                             placeholder="Quinto Reporte"></textarea>
                                     </div> --}}
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-1">
                                     <div class="form-group has-danger">
-                                        <label for="fecha">ID</label>
+                                        <label for="fecha">Id</label>
                                         <input type="text has-danger" class="form-control" name="anexoep_id"
                                             value="<?php echo($estandarid->id); ?>">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-success" value="Guardar">
-                    </form>
+                        <input style='width:150px; height:50px' type="submit" class="btn btn-success" value="Guardar">
+                        <a style='width:150px; height:50px' align="center" type="button" class="btn btn-warning "
+                        href="{{route('estandar_programaid',$estandarid->programa_id)}}">
+                        <img src="{{asset('imagenes/regresar.png')}}" width="40" height="35">
+                        Regresar
+                    </a>
+                      </form>
 
                 </div>
 
@@ -164,7 +169,7 @@
         </div>
     </div>
     <div class="card-header">
-        Reportes
+        Reporte de los Anexos 
     </div>
     <table class="display nowrap table table-hover table-striped table-bordered" id="estandar_detalle">
         <thead class="table table-striped">

@@ -200,10 +200,10 @@
                                         <li><a class="fa fa-cubes" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
                                         <li><a class="fa fa-bar-chart-o" href="{{route('estandartotal')}}">
-                                                Estandaresv1</a>
+                                                Estandares-2019</a>
                                         </li>
                                         <li><a class="fa fa-bar-chart-o" href="{{route('grafic')}}">
-                                                Estandaresv2</a>
+                                                Estandares-2018</a>
                                         </li>
                                     </ul>
 

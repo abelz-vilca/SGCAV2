@@ -15,12 +15,12 @@
                             <div class="form-row">
                                 <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">INSTITUCIÓN</label>
-                                    <input  type="email" class="form-control has-success" id="inputEmail4"
+                                    <input  type="text" class="form-control has-success" id="inputEmail4"
                                         placeholder="UNIVERSIDAD NACIONAL DE SAN CRISTOBAL DE HUAMANGA">
                                 </div>
                                 <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">OFICINA</label>
-                                    <input type="email" class="form-control form-control-success" id="inputEmail4"
+                                    <input type="text" class="form-control form-control-success" id="inputEmail4"
                                         placeholder="Oficina General de Calidad y Acreditación">
                                 </div>
                                 <div class="form-group has-success col-md-12">
@@ -34,17 +34,17 @@
                             <div class="form-row">
                                 <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">JEFE DE LA OFICINA</label>
-                                    <input  type="email" class="form-control has-success" id="inputEmail4"
+                                    <input  type="text" class="form-control has-success" id="inputEmail4"
                                         placeholder="Dra. Luisa Alcarraz Curi">
                                 </div>
                                 <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">CONTACTO</label>
-                                    <input  type="email" class="form-control has-success" id="inputEmail4"
+                                    <input  type="text" class="form-control has-success" id="inputEmail4"
                                         placeholder="066-403240">
                                 </div>
                                 <div class="form-group has-success col-md-12">
                                     <label for="inputEmail4">REPORTE</label>
-                                    <input  type="email" class="form-control has-success" id="inputEmail4"
+                                    <input  type="text" class="form-control has-success" id="inputEmail4"
                                         placeholder="Quinto Reporte">
                                 </div>
                             </div>
