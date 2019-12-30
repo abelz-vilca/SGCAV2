@@ -38,7 +38,7 @@
                 <th scope="row">{{$item->id}}</th>
                 <td>
                     <a href="{{Storage::url($item->archivo)}}" target="_blank">Abrir Documento del Estándar :
-                        {{$item->id}}</a>
+                        {{$item->estandar_id}}</a>
                     {{-- <a href="{{$item->link}}" target="_blank">{{$item->link}}</a> --}}
                     {{-- <a href="{{route('linkarchivo', $item->id)}}">{{$item->link}}</a> --}}
                 </td>
