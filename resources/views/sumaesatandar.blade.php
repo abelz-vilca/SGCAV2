@@ -31,34 +31,34 @@
                     Total de estandares
                 </div>
                 <div class="table-responsive m-t-10">
-                <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0"
-                    width="100%" id="estandartotal" align="center">
-                    <thead class="thead-info">
-                        <tr>
-                            <th scope="col">N°</th>
-                            <th scope="col">Estanadar</th>
-                            <th scope="col">Calificacion</th>
-                            {{-- <th>Fecha</th> --}}
-                            {{-- <th>Acciones</th> --}}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($estandarprograma as $item )
-                        <tr>
-                            <th scope="row">{{$item->id}}</th>
-                            <td>Estandar: {{$item->id}} </td>
-                            <td>{{$item->calificacion}}</td>
-                            {{-- <td>{{$item->fecha}}</td> --}}
-                            {{-- <td>
+                    <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0"
+                        width="100%" id="estandartotal" align="center">
+                        <thead class="thead-info">
+                            <tr>
+                                <th scope="col">N°</th>
+                                <th scope="col">Estanadar</th>
+                                <th scope="col">Calificacion</th>
+                                {{-- <th>Fecha</th> --}}
+                                {{-- <th>Acciones</th> --}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($estandarprograma as $item )
+                            <tr>
+                                <th scope="row">{{$item->id}}</th>
+                                <td>Estandar: {{$item->estandar_id}} </td>
+                                <td>{{$item->calificacion}}</td>
+                                {{-- <td>{{$item->fecha}}</td> --}}
+                                {{-- <td>
                                     <a disabled="disabled" href="" type="button" class="btn btn-info">Información</a>
                                     </td> --}}
 
-                        </tr>
-                        @endforeach()
-                    </tbody>
-                </table>
+                            </tr>
+                            @endforeach()
+                        </tbody>
+                    </table>
+                </div>
             </div>
-</div>
             <div class="col">
                 <div class="card-header">
                     Total de Factores
@@ -77,107 +77,107 @@
                             <th scope="row">1</th>
                             <td>Factor 01</td>
                             <td> {{$factor1}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>Factor 02</td>
                             <td>{{$factor2}}</td>
-                           
+
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td>Factor 03</td>
                             <td>{{$factor3}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">4</th>
                             <td>Factor 04</td>
                             <td>{{$factor4}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">5</th>
                             <td>Factor 05</td>
                             <td>{{$factor5}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">6</th>
                             <td>Factor 06</td>
                             <td>{{$factor6}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">7</th>
                             <td>Factor 07</td>
                             <td>{{$factor7}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">8</th>
                             <td>Factor 08</td>
                             <td>{{$factor8}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">9</th>
                             <td>Factor 09</td>
                             <td>{{$factor9}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">10</th>
                             <td>Factor 10</td>
                             <td>{{$factor10}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">11</th>
                             <td>Factor 11</td>
                             <td>{{$factor11}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">12</th>
                             <td>Factor 12</td>
                             <td>{{$factor12}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">13</th>
                             <td>Dimension 01</td>
                             <td>{{$dimension01}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">14</th>
                             <td>Dimension 02</td>
                             <td>{{$dimension02}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">15</th>
                             <td>Dimension 03</td>
                             <td>{{$dimension03}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">16</th>
                             <td>Dimension 04</td>
                             <td>{{$dimension04}}</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">17</th>
                             <td>Total Estandar</td>
                             <td>{{$categorias}}</td>
-                            
+
                         </tr>
                     </tbody>
                 </table>
-                           </div>
+            </div>
         </div>
 
     </div>
