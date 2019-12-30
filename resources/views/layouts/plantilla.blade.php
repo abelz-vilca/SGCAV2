@@ -58,8 +58,7 @@
                             --}}
                             <img src="" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="{{asset('assets/images/logine.png')}}" alt="homepage"
-                                class="light-logo" />
+                            <img src="{{asset('assets/images/logine.png')}}" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
@@ -117,11 +116,15 @@
                                         </div>
                                     </li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="ti-user"></i> Mi perfil</a></li>
-                                    <li><a href="#"><i class="ti-wallet"></i> Mi Balance</a></li>
-                                    <li><a href="#"><i class="ti-email"></i> Bandeja de Entrada</a></li>
+                                    <li><a href=""><i class="ti-user"></i> Mi
+                                            perfil</a></li>
+                                    <li><a href="{{asset('Documentos/ManualU_V1.pdf')}}" target="_blank"><i
+                                                class="ti-files"></i> Manual
+                                            de Usuario</a></li>
+                                    <li><a href=""><i class="ti-wallet"></i> Mi Balance</a></li>
+                                    <li><a href=""><i class="ti-email"></i> Bandeja de Entrada</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="ti-settings"></i>Configuración de cuenta</a></li>
+                                    <li><a href=""><i class="ti-settings"></i> Configuración de cuenta</a></li>
                                     <li role="separator" class="divider"></li>
                                     <!-- -->
                                     {{-- <a class="dropdown-item" href="{{ route('logout') }}"
@@ -195,29 +198,30 @@
                                         <i class=" icon-chart"></i><span class="hide-menu"> REPORTES</span></a>
                                     <ul aria-expanded="false" class="collapse">
                                         <li><a class="icon-file" href="{{route('informes')}}">Reportes</a></li>
-                                        {{-- <li><a class="icon-file" href="{{route('tanexo')}}">anexos</a></li> --}}
-                                        <li><a class="icon-crop" href="{{route('reporte')}}"> PROGRAMAS</a></li>
-                                        <li><a class="fa fa-cubes" href="">Dimencion</a></li>
-                                        <li><a class="icon-pie-chart " href=""> Factores</a></li>
-                                        <li><a class="fa fa-bar-chart-o" href="{{route('estandartotal')}}">
-                                                Estandares-2019</a>
-                                        </li>
-                                        <li><a class="fa fa-bar-chart-o" href="{{route('grafic')}}">
-                                                Estandares-2018</a>
-                                        </li>
-                                    </ul>
-
+                                        {{-- <li><a class="icon-file" href="{{route('tanexo')}}">anexos</a>
+                                </li> --}}
+                                <li><a class="icon-crop" href="{{route('reporte')}}"> PROGRAMAS</a></li>
+                                <li><a class="fa fa-cubes" href="">Dimencion</a></li>
+                                <li><a class="icon-pie-chart " href=""> Factores</a></li>
+                                <li><a class="fa fa-bar-chart-o" href="{{route('estandartotal')}}">
+                                        Estandares-2019</a>
                                 </li>
-                                <li><a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
-                                        <i class="fa fa-folder"></i><span class="hide-menu"> Documentos</span></a>
-                                    <ul aria-expanded="false" class="collapse">
-                                        <li><a class=" fa fa-address-card" href="{{route('certificados')}}">
-                                                Certificados</a></li>
-                                        <li><a class="fa fa-file" href="{{route('certificados')}}"> Constancias</a></li>
-                                    </ul>
+                                <li><a class="fa fa-bar-chart-o" href="{{route('grafic')}}">
+                                        Estandares-2018</a>
                                 </li>
                             </ul>
+
                         </li>
+                        <li><a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
+                                <i class="fa fa-folder"></i><span class="hide-menu"> Documentos</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a class=" fa fa-address-card" href="{{route('certificados')}}">
+                                        Certificados</a></li>
+                                <li><a class="fa fa-file" href="{{route('certificados')}}"> Constancias</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
